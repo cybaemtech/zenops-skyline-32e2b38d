@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Coins, DatabaseZap, Gauge, Mail, Network, ShieldCheck } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
 import {
@@ -10,6 +10,7 @@ import {
   ServiceCard,
 } from "@/components/site/primitives";
 import heroVideo from "@/assets/solutions-hero.mp4.asset.json";
+import heroPoster from "@/assets/solutions-hero-poster.webp";
 
 
 const TITLE = "Solutions — Azure Migration, Managed Cloud, Security, DevOps & FinOps | ZensusTech";
@@ -117,13 +118,31 @@ const SOLUTIONS = [
   },
 ];
 
+function shouldSkipVideo() {
+  if (typeof window === "undefined") return true;
+  // Respect data-saver and slow connections: the poster image is enough.
+  const conn = (navigator as Navigator & { connection?: { saveData?: boolean; effectiveType?: string } })
+    .connection;
+  if (conn?.saveData) return true;
+  if (conn?.effectiveType && /(^|-)(2g|slow-2g)$/.test(conn.effectiveType)) return true;
+  return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+}
+
 function HeroVideo() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const loopsRef = useRef(0);
+  // Only attach the video source on the client, after we know the network
+  // and motion preferences allow it. Until then only the light poster loads.
+  const [src, setSrc] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (shouldSkipVideo()) return;
+    setSrc(heroVideo.url);
+  }, []);
 
   useEffect(() => {
     const v = videoRef.current;
-    if (!v) return;
+    if (!v || !src) return;
     // Try to start with audio on the first loop. Browsers block autoplay
     // with sound until the user has interacted with the page; if that
     // happens, fall back to muted so playback still starts.
@@ -135,15 +154,16 @@ function HeroVideo() {
         v.play().catch(() => {});
       });
     }
-  }, []);
+  }, [src]);
 
   return (
     <video
       ref={videoRef}
-      src={heroVideo.url}
+      {...(src ? { src } : {})}
+      poster={heroPoster}
       autoPlay
       playsInline
-      preload="auto"
+      preload="metadata"
       aria-hidden="true"
       onEnded={() => {
         const v = videoRef.current;

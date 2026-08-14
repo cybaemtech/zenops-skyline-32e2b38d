@@ -6,7 +6,8 @@ import { Reveal } from "@/components/site/Reveal";
 import { IndustryVoices } from "@/components/site/IndustryVoices";
 import { CtaBand, IndustryCard, Section, SectionHead } from "@/components/site/primitives";
 import { cn } from "@/lib/utils";
-import splitImg from "@/assets/industries-split.jpg";
+import splitImg from "@/assets/industries-split.webp";
+import splitImgSmall from "@/assets/industries-split-800.webp";
 
 const TITLE = "Industries & Azure Use Cases — SaaS, Retail, Manufacturing, Finance | ZenOps";
 const DESCRIPTION =
@@ -21,6 +22,8 @@ export const Route = createFileRoute("/industries")({
       { property: "og:description", content: DESCRIPTION },
       { property: "og:url", content: "/industries" },
     ],
+    // The hero <img> itself carries fetchPriority="high" + a responsive
+    // srcset, which is enough for the LCP without a duplicate preload fetch.
     links: [{ rel: "canonical", href: "/industries" }],
   }),
   component: IndustriesPage,
@@ -111,10 +114,14 @@ function IndustriesPage() {
         {/* Full-bleed hero background image — mirrored so cloud sits on the right */}
         <img
           src={splitImg}
+          srcSet={`${splitImgSmall} 800w, ${splitImg} 1600w`}
+          sizes="100vw"
           alt="Azure cloud operations network with connected nodes and data flows"
-          width={1280}
-          height={1280}
+          width={1600}
+          height={1600}
           loading="eager"
+          fetchPriority="high"
+          decoding="async"
           className="absolute inset-0 h-full w-full scale-x-[-1] object-cover object-center"
         />
         {/* Legibility overlays: darken base + left-side gradient for text */}

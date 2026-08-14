@@ -219,6 +219,17 @@
   transform: none;
 }
 
+/* Decorative infinite animations are expensive to keep repainting on phones,
+   where they are barely visible anyway. Static there, animated on larger
+   pointer-based screens. */
+@media (max-width: 767px) {
+  .animate-grid-drift,
+  .animate-float-slow,
+  .animate-dash {
+    animation: none !important;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .reveal {
     opacity: 1;
