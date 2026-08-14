@@ -4,12 +4,10 @@ import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 
 const NAV = [
-  { label: "Home", to: "/" },
   { label: "ZenOps", to: "/zenops" },
   { label: "Solutions", to: "/solutions" },
   { label: "Industries", to: "/industries" },
   { label: "ZensusTech", to: "/zensustech" },
-  { label: "Contact", to: "/contact" },
 ] as const;
 
 export function Navbar() {
