@@ -109,16 +109,42 @@ function IndustriesPage() {
     <>
       <section className="relative overflow-hidden surface-mesh">
         <div className="pointer-events-none absolute inset-0 grid-backdrop opacity-15 animate-grid-drift" aria-hidden="true" />
-        <div className="relative mx-auto w-full max-w-4xl px-5 py-20 text-center sm:px-8 md:py-28">
-          <Reveal>
-            <p className="eyebrow text-azure-bright">Industries & use cases</p>
-            <h1 className="mt-5 text-4xl font-extrabold leading-[1.05] text-navy-foreground sm:text-5xl lg:text-6xl">
-              Built Around the Problems Growing Businesses Actually Face
-            </h1>
-            <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-navy-foreground/70 sm:text-lg">
-              Business situation → cloud problem → ZenOps value → ZensusTech intervention.
-            </p>
-          </Reveal>
+        <div className="relative mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-10 px-5 py-20 sm:px-8 md:py-28 lg:grid-cols-2">
+          {/* Image left, fades to transparent on the right edge */}
+          <div className="relative order-1 min-h-[320px] lg:order-none">
+            <img
+              src={splitImg}
+              alt="Azure cloud operations network with connected nodes and data flows"
+              width={1280}
+              height={1280}
+              loading="eager"
+              className="absolute inset-0 h-full w-full object-cover"
+              style={{
+                maskImage: "linear-gradient(to right, #000 55%, transparent 100%)",
+                WebkitMaskImage: "linear-gradient(to right, #000 55%, transparent 100%)",
+              }}
+            />
+            <div
+              className="pointer-events-none absolute inset-0"
+              style={{
+                background:
+                  "linear-gradient(to right, transparent 60%, var(--color-surface) 100%)",
+              }}
+              aria-hidden="true"
+            />
+          </div>
+          {/* Content right */}
+          <div className="order-2 text-left lg:order-none lg:pl-4">
+            <Reveal>
+              <p className="eyebrow text-azure-bright">Industries & use cases</p>
+              <h1 className="mt-5 text-4xl font-extrabold leading-[1.05] text-navy-foreground sm:text-5xl lg:text-6xl">
+                Built Around the Problems Growing Businesses Actually Face
+              </h1>
+              <p className="mt-6 max-w-xl text-base leading-relaxed text-navy-foreground/70 sm:text-lg">
+                Business situation → cloud problem → ZenOps value → ZensusTech intervention.
+              </p>
+            </Reveal>
+          </div>
         </div>
       </section>
 
