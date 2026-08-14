@@ -4,12 +4,10 @@ import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 
 const NAV = [
-  { label: "Home", to: "/" },
   { label: "ZenOps", to: "/zenops" },
   { label: "Solutions", to: "/solutions" },
   { label: "Industries", to: "/industries" },
   { label: "ZensusTech", to: "/zensustech" },
-  { label: "Contact", to: "/contact" },
 ] as const;
 
 export function Navbar() {
@@ -55,7 +53,6 @@ export function Navbar() {
             <Link
               key={item.to}
               to={item.to}
-              activeOptions={{ exact: item.to === "/" }}
               className="rounded-lg px-3.5 py-2 text-sm font-semibold text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
               activeProps={{ className: "bg-accent text-foreground" }}
             >
@@ -91,7 +88,6 @@ export function Navbar() {
               <Link
                 key={item.to}
                 to={item.to}
-                activeOptions={{ exact: item.to === "/" }}
                 onClick={() => setOpen(false)}
                 className="rounded-lg px-3 py-3 text-sm font-semibold text-muted-foreground hover:bg-accent hover:text-foreground"
                 activeProps={{ className: "bg-accent text-foreground" }}
