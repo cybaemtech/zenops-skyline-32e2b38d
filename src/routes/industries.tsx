@@ -22,7 +22,18 @@ export const Route = createFileRoute("/industries")({
       { property: "og:description", content: DESCRIPTION },
       { property: "og:url", content: "/industries" },
     ],
-    links: [{ rel: "canonical", href: "/industries" }],
+    links: [
+      { rel: "canonical", href: "/industries" },
+      // Preload the LCP hero image so it starts downloading with the HTML.
+      {
+        rel: "preload",
+        as: "image",
+        href: splitImg,
+        imagesrcset: `${splitImgSmall} 800w, ${splitImg} 1600w`,
+        imagesizes: "100vw",
+        fetchpriority: "high",
+      },
+    ],
   }),
   component: IndustriesPage,
 });
