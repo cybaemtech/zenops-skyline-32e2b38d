@@ -50,18 +50,13 @@ export function Footer() {
           <h2 className="eyebrow text-navy-foreground/60">Company</h2>
           <ul className="mt-4 space-y-2 text-sm text-navy-foreground/75">
             <li>
-              <Link to="/zensustech" className="hover:text-azure-bright">
-                ZensusTech
+              <Link to="/case-studies" className="hover:text-azure-bright">
+                Case Studies
               </Link>
             </li>
             <li>
               <Link to="/industries" className="hover:text-azure-bright">
                 Industries
-              </Link>
-            </li>
-            <li>
-              <Link to="/zensustech" hash="case-studies" className="hover:text-azure-bright">
-                Case Studies
               </Link>
             </li>
             <li>
