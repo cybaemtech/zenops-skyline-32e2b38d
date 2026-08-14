@@ -54,7 +54,7 @@ export function IndustryVoices() {
           ))}
         </div>
 
-        <Reveal className="relative -mt-6 text-center sm:-mt-16">
+        <Reveal className="relative mt-10 text-center sm:mt-4">
           <span className="eyebrow inline-flex rounded-full bg-secondary px-4 py-2 text-secondary-foreground">
             Industry voices
           </span>
