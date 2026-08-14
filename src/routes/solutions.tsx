@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Coins, DatabaseZap, Gauge, Mail, Network, ShieldCheck } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
 import {
