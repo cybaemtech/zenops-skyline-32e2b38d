@@ -7,6 +7,7 @@ const NAV = [
   { label: "ZenOps", to: "/zenops" },
   { label: "Solutions", to: "/solutions" },
   { label: "Industries", to: "/industries" },
+  { label: "Case Studies", to: "/case-studies" },
   { label: "ZensusTech", to: "/zensustech" },
 ] as const;
 
