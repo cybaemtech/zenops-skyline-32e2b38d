@@ -99,9 +99,8 @@ export function CtaLink({
   return (
     <Link
       to={to}
-      hash={hash}
+      {...(hash ? { hash } : {})}
       className={cn(btnBase, variants[variant], className)}
-      aria-label={typeof children === "string" ? children : undefined}
     >
       {children}
       {variant === "primary" ? <ArrowRight className="size-4" aria-hidden="true" /> : null}
