@@ -22,7 +22,7 @@ export function Footer() {
           <h2 className="eyebrow text-navy-foreground/60">ZenOps</h2>
           <ul className="mt-4 space-y-2 text-sm text-navy-foreground/75">
             <li>
-              <Link to="/zenops" className="inline-block py-1 hover:text-azure-bright">
+              <Link to="/zenops" className="inline-block py-1.5 hover:text-azure-bright">
                 Intelligent Azure Operations
               </Link>
             </li>
@@ -38,7 +38,7 @@ export function Footer() {
               "Application Modernization",
             ].map((item) => (
               <li key={item}>
-                <Link to="/solutions" className="inline-block py-1 hover:text-azure-bright">
+                <Link to="/solutions" className="inline-block py-1.5 hover:text-azure-bright">
                   {item}
                 </Link>
               </li>
@@ -50,17 +50,17 @@ export function Footer() {
           <h2 className="eyebrow text-navy-foreground/60">Company</h2>
           <ul className="mt-4 space-y-2 text-sm text-navy-foreground/75">
             <li>
-              <Link to="/case-studies" className="inline-block py-1 hover:text-azure-bright">
+              <Link to="/case-studies" className="inline-block py-1.5 hover:text-azure-bright">
                 Case Studies
               </Link>
             </li>
             <li>
-              <Link to="/industries" className="inline-block py-1 hover:text-azure-bright">
+              <Link to="/industries" className="inline-block py-1.5 hover:text-azure-bright">
                 Industries
               </Link>
             </li>
             <li>
-              <Link to="/contact" className="inline-block py-1 hover:text-azure-bright">
+              <Link to="/contact" className="inline-block py-1.5 hover:text-azure-bright">
                 Contact
               </Link>
             </li>
@@ -72,13 +72,13 @@ export function Footer() {
           <ul className="mt-4 space-y-3 text-sm text-navy-foreground/75">
             <li className="flex items-center gap-2.5">
               <Mail className="size-4 text-azure-bright" aria-hidden="true" />
-              <a href="mailto:info@zensustech.com" className="inline-block py-1 hover:text-azure-bright">
+              <a href="mailto:info@zensustech.com" className="inline-block py-1.5 hover:text-azure-bright">
                 info@zensustech.com
               </a>
             </li>
             <li className="flex items-center gap-2.5">
               <Phone className="size-4 text-azure-bright" aria-hidden="true" />
-              <a href="tel:+919823101112" className="inline-block py-1 hover:text-azure-bright">
+              <a href="tel:+919823101112" className="inline-block py-1.5 hover:text-azure-bright">
                 +91 9823 10 11 12
               </a>
             </li>
