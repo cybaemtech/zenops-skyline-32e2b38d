@@ -1,11 +1,11 @@
 import { Reveal } from "@/components/site/Reveal";
 import { CtaLink } from "@/components/site/primitives";
-import v1 from "@/assets/voice-1.jpg";
-import v2 from "@/assets/voice-2.jpg";
-import v3 from "@/assets/voice-3.jpg";
-import v4 from "@/assets/voice-4.jpg";
-import v5 from "@/assets/voice-5.jpg";
-import v6 from "@/assets/voice-6.jpg";
+import v1 from "@/assets/voice-1.webp";
+import v2 from "@/assets/voice-2.webp";
+import v3 from "@/assets/voice-3.webp";
+import v4 from "@/assets/voice-4.webp";
+import v5 from "@/assets/voice-5.webp";
+import v6 from "@/assets/voice-6.webp";
 
 // Arch layout: [src, alt, translateY (rem), scale]
 const LEFT: Array<[string, string, number, number]> = [
