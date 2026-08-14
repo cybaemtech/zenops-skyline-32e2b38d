@@ -3,6 +3,7 @@ import { Banknote, Building, Cpu, Factory, GraduationCap, ShoppingCart } from "l
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
+import { IndustryVoices } from "@/components/site/IndustryVoices";
 import { CtaBand, IndustryCard, Section, SectionHead } from "@/components/site/primitives";
 import { cn } from "@/lib/utils";
 
@@ -129,6 +130,8 @@ function IndustriesPage() {
           ))}
         </div>
       </Section>
+
+      <IndustryVoices />
 
       <Section tone="white" id="use-cases">
         <SectionHead
