@@ -2,7 +2,6 @@ import { createFileRoute } from "@tanstack/react-router";
 import {
   Activity,
   ArrowRight,
-  Boxes,
   ChevronDown,
   CloudCog,
   Database,
@@ -19,15 +18,7 @@ import type { LucideIcon } from "lucide-react";
 import { useState } from "react";
 import { Reveal } from "@/components/site/Reveal";
 import { ArchitectureFlow } from "@/components/site/ZenOpsDiagram";
-import {
-  CtaBand,
-  CtaLink,
-  MetricCard,
-  Section,
-  SectionHead,
-  StatCard,
-  TestimonialCard,
-} from "@/components/site/primitives";
+import { CtaLink, MetricCard, Section, SectionHead, StatCard } from "@/components/site/primitives";
 import { cn } from "@/lib/utils";
 
 const TITLE = "Azure & Cloud Case Studies — Measurable Business Outcomes | ZensusTech";
@@ -281,35 +272,6 @@ const WAITING = [
   "an infrastructure bottleneck",
 ];
 
-const TESTIMONIALS = [
-  {
-    quote:
-      "ZensusTech transformed our cloud infrastructure completely. Their Azure migration strategy was flawless, and the cost savings exceeded our expectations. The team's expertise and dedication are exceptional.",
-    author: "Sourabh Tiwari — Chief Technology Officer",
-    company: "Codinker · IT Services Company",
-  },
-  {
-    quote:
-      "The DevOps automation implementation by ZensusTech revolutionized our development process. Deployment times went from hours to minutes, and our team's productivity tripled. Highly recommended!",
-    author: "Vijender Singh — Founder & CEO",
-    company: "ByteKode Labs · SaaS Platform",
-  },
-  {
-    quote:
-      "As a growing real estate platform, we needed reliable cloud infrastructure. ZensusTech provided 24/7 managed services that ensured our platform never went down during peak traffic. Outstanding support!",
-    author: "Thejes Gowda — Operations Director",
-    company: "UrbanVistaa · Real Estate Platform",
-  },
-];
-
-const FINAL_NEEDS = [
-  "Reduce cloud costs",
-  "Improve security",
-  "Prepare for compliance",
-  "Accelerate deployments",
-  "Modernize infrastructure",
-  "Operate Azure more effectively",
-];
 
 function CaseStudiesPage() {
   const [openId, setOpenId] = useState<string | null>("cs-01");
@@ -488,50 +450,6 @@ function CaseStudiesPage() {
         </div>
       </Section>
 
-      {/* TESTIMONIALS */}
-      <Section>
-        <SectionHead eyebrow="Client voices" title="What Our Clients Say" />
-        <div className="mt-14 grid gap-6 lg:grid-cols-3">
-          {TESTIMONIALS.map((t, i) => (
-            <Reveal key={t.author} delay={i * 90}>
-              <TestimonialCard quote={t.quote} author={t.author} company={t.company} />
-            </Reveal>
-          ))}
-        </div>
-      </Section>
-
-      {/* FINAL */}
-      <Section tone="white">
-        <SectionHead
-          eyebrow="Final step"
-          title="Your Cloud Story Could Be the Next Success Story."
-          copy="ZensusTech can help you identify the problem, build the right solution and deliver measurable outcomes."
-        />
-        <div className="mx-auto mt-12 grid max-w-4xl gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {FINAL_NEEDS.map((n, i) => (
-            <Reveal key={n} delay={i * 60}>
-              <div className="flex h-full items-center gap-3 rounded-2xl border border-border bg-background px-5 py-4 text-sm font-semibold text-foreground">
-                <Boxes className="size-4 shrink-0 text-primary" aria-hidden="true" />
-                {n}
-              </div>
-            </Reveal>
-          ))}
-        </div>
-        <div className="mt-12 flex flex-wrap justify-center gap-3">
-          <CtaLink to="/contact">Book a Free Cloud Assessment</CtaLink>
-          <CtaLink to="/zenops" variant="ghost">
-            Explore ZenOps
-          </CtaLink>
-        </div>
-      </Section>
-
-      <CtaBand
-        eyebrow="Stay ahead of it"
-        title="Don't Wait for the Next Cloud Problem. See It Coming."
-        copy="Continuous Azure intelligence across security, cost, compliance and operations."
-        primary={{ label: "Book a ZenOps Demo", to: "/zenops" }}
-        secondary={{ label: "Check My Azure Environment", to: "/contact" }}
-      />
     </>
   );
 }
