@@ -119,7 +119,7 @@ const SOLUTIONS = [
 function SolutionsPage() {
   return (
     <>
-      <section className="relative overflow-hidden bg-navy">
+      <section className="relative h-[92vh] w-full overflow-hidden bg-navy">
         <video
           src={heroVideo.url}
           autoPlay
@@ -130,26 +130,6 @@ function SolutionsPage() {
           aria-hidden="true"
           className="absolute inset-0 h-full w-full object-cover"
         />
-        <div className="pointer-events-none absolute inset-0 bg-navy/65" aria-hidden="true" />
-        <div
-          className="pointer-events-none absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(to bottom, rgba(6,26,58,0.85) 0%, rgba(6,26,58,0.45) 50%, rgba(6,26,58,0.9) 100%)",
-          }}
-          aria-hidden="true"
-        />
-        <div className="relative mx-auto w-full max-w-4xl px-5 py-24 text-center sm:px-8 md:py-36">
-          <Reveal>
-            <p className="eyebrow text-azure-bright">Solutions</p>
-            <h1 className="mt-5 text-4xl font-extrabold leading-[1.05] text-white sm:text-5xl lg:text-6xl">
-              From Cloud Intelligence to Cloud Transformation
-            </h1>
-            <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-white/80 sm:text-lg">
-              Use ZenOps to understand your environment. Use ZensusTech expertise to transform it.
-            </p>
-          </Reveal>
-        </div>
       </section>
 
 
