@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useEffect, useRef } from "react";
 import { Coins, DatabaseZap, Gauge, Mail, Network, ShieldCheck } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
 import {
@@ -116,20 +117,53 @@ const SOLUTIONS = [
   },
 ];
 
+function HeroVideo() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const loopsRef = useRef(0);
+
+  useEffect(() => {
+    const v = videoRef.current;
+    if (!v) return;
+    // Try to start with audio on the first loop. Browsers block autoplay
+    // with sound until the user has interacted with the page; if that
+    // happens, fall back to muted so playback still starts.
+    v.muted = false;
+    const playPromise = v.play();
+    if (playPromise && typeof playPromise.catch === "function") {
+      playPromise.catch(() => {
+        v.muted = true;
+        v.play().catch(() => {});
+      });
+    }
+  }, []);
+
+  return (
+    <video
+      ref={videoRef}
+      src={heroVideo.url}
+      autoPlay
+      playsInline
+      preload="auto"
+      aria-hidden="true"
+      onEnded={() => {
+        const v = videoRef.current;
+        if (!v) return;
+        loopsRef.current += 1;
+        // From the second loop onward, mute and replay.
+        v.muted = true;
+        v.currentTime = 0;
+        v.play().catch(() => {});
+      }}
+      className="absolute inset-0 h-full w-full object-cover"
+    />
+  );
+}
+
 function SolutionsPage() {
   return (
     <>
       <section className="relative h-[92vh] w-full overflow-hidden bg-navy">
-        <video
-          src={heroVideo.url}
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          aria-hidden="true"
-          className="absolute inset-0 h-full w-full object-cover"
-        />
+        <HeroVideo />
       </section>
 
 
