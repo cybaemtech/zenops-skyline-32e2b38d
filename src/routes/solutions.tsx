@@ -100,7 +100,7 @@ const SOLUTIONS = [
     title: "Cost Optimization / FinOps",
     copy: "Bring cloud spending under control with continuous analysis, right-sizing and clear savings reporting.",
     capabilities: ["Cost analysis", "Resource optimization", "Budget management", "Savings reporting"],
-    cta: "Check My Azure Environment",
+    cta: "Book Your Demo Today",
   },
   {
     icon: Mail,

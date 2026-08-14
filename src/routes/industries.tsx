@@ -203,7 +203,7 @@ function IndustriesPage() {
         eyebrow="Next step"
         title="Get My Azure Health Check"
         copy="Tell us which question matters most and we'll start there."
-        primary={{ label: "Check My Azure Environment", to: "/contact" }}
+        primary={{ label: "Book Your Demo Today", to: "/contact" }}
         secondary={{ label: "Book a ZenOps Demo", to: "/zenops" }}
       />
     </>
