@@ -164,6 +164,8 @@ const SERVICES = [
 function Home() {
   return (
     <>
+      <BackgroundAudio />
+
       {/* HERO */}
       <section className="relative overflow-hidden surface-mesh">
         <div className="pointer-events-none absolute inset-0 grid-backdrop opacity-15 animate-grid-drift" aria-hidden="true" />
