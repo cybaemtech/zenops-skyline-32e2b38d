@@ -53,7 +53,6 @@ export function Navbar() {
             <Link
               key={item.to}
               to={item.to}
-              activeOptions={{ exact: item.to === "/" }}
               className="rounded-lg px-3.5 py-2 text-sm font-semibold text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
               activeProps={{ className: "bg-accent text-foreground" }}
             >
