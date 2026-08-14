@@ -1,5 +1,184 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Banknote, Building, Cpu, Factory, GraduationCap, ShoppingCart } from "lucide-react";
+import { useState } from "react";
+import { ChevronDown } from "lucide-react";
+import { Reveal } from "@/components/site/Reveal";
+import { CtaBand, IndustryCard, Section, SectionHead } from "@/components/site/primitives";
+import { cn } from "@/lib/utils";
+
+const TITLE = "Industries & Azure Use Cases — SaaS, Retail, Manufacturing, Finance | ZenOps";
+const DESCRIPTION =
+  "See how ZenOps and ZensusTech address real Azure problems by industry: cost, security, compliance readiness, identity risk and operational visibility.";
 
 export const Route = createFileRoute("/industries")({
-  component: () => null,
+  head: () => ({
+    meta: [
+      { title: TITLE },
+      { name: "description", content: DESCRIPTION },
+      { property: "og:title", content: TITLE },
+      { property: "og:description", content: DESCRIPTION },
+      { property: "og:url", content: "/industries" },
+    ],
+    links: [{ rel: "canonical", href: "/industries" }],
+  }),
+  component: IndustriesPage,
 });
+
+const INDUSTRIES = [
+  {
+    icon: Cpu,
+    title: "SaaS & Technology",
+    problem: "Rapid Azure growth, complex environments, frequent deployments and security requirements.",
+    zenops: ["Security", "Operational visibility", "Cost intelligence", "Governance"],
+    zensustech: ["DevOps", "Cloud modernization", "Managed operations"],
+  },
+  {
+    icon: ShoppingCart,
+    title: "Retail & E-commerce",
+    problem: "Seasonal demand, unpredictable traffic and cost pressure.",
+    zenops: ["Operational health", "Cost visibility", "Security"],
+    zensustech: ["Scalable infrastructure", "Cloud optimization", "Managed services"],
+  },
+  {
+    icon: Factory,
+    title: "Manufacturing",
+    problem: "Business-critical infrastructure, limited IT resources and security concerns.",
+    zenops: ["Monitoring", "Governance", "Cost optimization", "Security posture"],
+    zensustech: ["Managed cloud services", "Security", "Backup / DR"],
+  },
+  {
+    icon: Building,
+    title: "Real Estate",
+    problem: "Customer-facing digital platforms with growing infrastructure needs.",
+    zenops: ["Availability", "Security", "Cost control"],
+    zensustech: ["Cloud architecture", "Managed services", "Application modernization"],
+  },
+  {
+    icon: GraduationCap,
+    title: "Education",
+    problem: "Digital platforms require scalable and reliable infrastructure.",
+    zenops: ["Operational visibility", "Security", "Governance"],
+    zensustech: ["Cloud transformation", "Managed services"],
+  },
+  {
+    icon: Banknote,
+    title: "Financial Services",
+    problem: "Sensitive information, security requirements and compliance expectations.",
+    zenops: ["Security", "Governance", "Audit visibility"],
+    zensustech: ["Cloud security", "Compliance", "Managed operations"],
+  },
+];
+
+const USE_CASES = [
+  {
+    q: "Is Azure spending too much?",
+    a: "ZenOps highlights idle resources, overprovisioned infrastructure and spend patterns that drift over time. ZensusTech cost optimization then handles right-sizing, budget governance and savings reporting.",
+  },
+  {
+    q: "Are we actually secure?",
+    a: "Security posture is assembled from configuration, exposure and protection signals rather than a single dashboard, so weaknesses become visible. ZensusTech security assessments and remediation follow up on what matters most.",
+  },
+  {
+    q: "Are we audit-ready?",
+    a: "ZenOps is designed to keep policy alignment, control visibility and supporting evidence in one place, so audits and customer security questionnaires do not start from scratch every time.",
+  },
+  {
+    q: "Do we have risky identities?",
+    a: "Identity and access intelligence surfaces privileged accounts, unusual sign-in behaviour and access sprawl — the areas most often exploited in cloud incidents.",
+  },
+  {
+    q: "Do we have cloud blind spots?",
+    a: "Unified Azure visibility maps subscriptions, resources and configuration so untracked or forgotten workloads stop hiding between environments.",
+  },
+  {
+    q: "Are operational issues being detected early?",
+    a: "Operational intelligence watches health and reliability signals so degradation is noticed before users report it. ZensusTech managed services can own the response 24×7.",
+  },
+  {
+    q: "Do we need more CloudOps capacity?",
+    a: "If your team is stretched, ZenOps extends how much Azure surface a small team can cover, and ZensusTech managed cloud services add capacity without hiring a specialist function.",
+  },
+];
+
+function IndustriesPage() {
+  const [open, setOpen] = useState<number | null>(0);
+
+  return (
+    <>
+      <section className="relative overflow-hidden surface-mesh">
+        <div className="pointer-events-none absolute inset-0 grid-backdrop opacity-15 animate-grid-drift" aria-hidden="true" />
+        <div className="relative mx-auto w-full max-w-4xl px-5 py-20 text-center sm:px-8 md:py-28">
+          <Reveal>
+            <p className="eyebrow text-azure-bright">Industries & use cases</p>
+            <h1 className="mt-5 text-4xl font-extrabold leading-[1.05] text-navy-foreground sm:text-5xl lg:text-6xl">
+              Built Around the Problems Growing Businesses Actually Face
+            </h1>
+            <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-navy-foreground/70 sm:text-lg">
+              Business situation → cloud problem → ZenOps value → ZensusTech intervention.
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
+      <Section tone="light">
+        <div className="grid gap-5 lg:grid-cols-2">
+          {INDUSTRIES.map((ind, i) => (
+            <Reveal key={ind.title} delay={i * 60}>
+              <IndustryCard {...ind} />
+            </Reveal>
+          ))}
+        </div>
+      </Section>
+
+      <Section tone="white" id="use-cases">
+        <SectionHead
+          eyebrow="Use cases"
+          title="What Problem Are You Trying to Solve?"
+          copy="Pick the question that sounds like your environment."
+        />
+        <div className="mx-auto mt-14 grid max-w-4xl gap-3">
+          {USE_CASES.map((uc, i) => {
+            const isOpen = open === i;
+            return (
+              <Reveal key={uc.q} delay={i * 40}>
+                <div
+                  className={cn(
+                    "rounded-2xl border bg-background transition-colors",
+                    isOpen ? "border-primary/40 shadow-soft" : "border-border",
+                  )}
+                >
+                  <button
+                    type="button"
+                    onClick={() => setOpen(isOpen ? null : i)}
+                    aria-expanded={isOpen}
+                    className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left"
+                  >
+                    <span className="text-base font-bold sm:text-lg">{uc.q}</span>
+                    <ChevronDown
+                      className={cn(
+                        "size-5 shrink-0 text-primary transition-transform duration-300",
+                        isOpen && "rotate-180",
+                      )}
+                      aria-hidden="true"
+                    />
+                  </button>
+                  {isOpen ? (
+                    <p className="px-6 pb-6 text-sm leading-relaxed text-muted-foreground">{uc.a}</p>
+                  ) : null}
+                </div>
+              </Reveal>
+            );
+          })}
+        </div>
+      </Section>
+
+      <CtaBand
+        eyebrow="Next step"
+        title="Get My Azure Health Check"
+        copy="Tell us which question matters most and we'll start there."
+        primary={{ label: "Check My Azure Environment", to: "/contact" }}
+        secondary={{ label: "Book a ZenOps Demo", to: "/zenops" }}
+      />
+    </>
+  );
+}
