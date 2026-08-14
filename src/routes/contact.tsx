@@ -1,5 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import contactAudio from "@/assets/contact-audio.mp3.asset.json";
+import { BackgroundAudio } from "@/components/site/BackgroundAudio";
 import { ContactForm } from "@/components/site/ContactForm";
 import { Reveal } from "@/components/site/Reveal";
 import { CtaBand, Section } from "@/components/site/primitives";
