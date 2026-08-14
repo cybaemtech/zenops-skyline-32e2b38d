@@ -483,7 +483,7 @@ function StudyCard({ study, open, onToggle }: { study: Study; open: boolean; onT
             type="button"
             onClick={onToggle}
             aria-expanded={open}
-            className="mt-7 inline-flex items-center gap-2 text-sm font-bold text-primary transition-colors hover:brightness-110"
+            className="mt-7 inline-flex min-h-11 items-center gap-2 text-sm font-bold text-primary transition-colors hover:brightness-110"
           >
             {open ? "Close Case Study" : "View Case Study"}
             <ChevronDown className={cn("size-4 transition-transform", open && "rotate-180")} aria-hidden="true" />
