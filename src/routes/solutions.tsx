@@ -182,7 +182,9 @@ function HeroVideo() {
 function SolutionsPage() {
   return (
     <>
-      <section className="relative h-[92vh] w-full overflow-hidden bg-navy">
+      {/* On phones the section matches the video's 16:9 frame so the whole
+          composition stays visible; larger screens keep the tall cinematic crop. */}
+      <section className="relative aspect-video w-full overflow-hidden bg-navy sm:aspect-auto sm:h-[92vh]">
         <HeroVideo />
       </section>
 
