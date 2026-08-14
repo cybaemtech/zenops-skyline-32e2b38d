@@ -6,6 +6,7 @@ import { Reveal } from "@/components/site/Reveal";
 import { IndustryVoices } from "@/components/site/IndustryVoices";
 import { CtaBand, IndustryCard, Section, SectionHead } from "@/components/site/primitives";
 import { cn } from "@/lib/utils";
+import splitImg from "@/assets/industries-split.jpg";
 
 const TITLE = "Industries & Azure Use Cases — SaaS, Retail, Manufacturing, Finance | ZenOps";
 const DESCRIPTION =
