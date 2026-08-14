@@ -20,11 +20,13 @@ const RIGHT: Array<[string, string, number, number]> = [
   [v4, "Manufacturing supervisor on the factory floor", 3.5, 0.82],
 ];
 
-function Tile({ item }: { item: [string, string, number, number] }) {
+function Tile({ item, hideOnMobile }: { item: [string, string, number, number]; hideOnMobile?: boolean }) {
   const [src, alt, y, scale] = item;
   return (
     <div
-      className="w-[clamp(4.5rem,11vw,8.5rem)] shrink-0 overflow-hidden rounded-3xl border border-border bg-card shadow-soft transition-transform duration-500 hover:-translate-y-1.5"
+      className={`${
+        hideOnMobile ? "hidden sm:block " : ""
+      }w-[clamp(4.25rem,17vw,8.5rem)] shrink-0 overflow-hidden rounded-3xl border border-border bg-card shadow-soft transition-transform duration-500 hover:-translate-y-1.5`}
       style={{ transform: `translateY(${y}rem) scale(${scale})` }}
     >
       <img
@@ -44,15 +46,17 @@ export function IndustryVoices() {
     <section className="relative overflow-hidden bg-background py-20 md:py-28">
       <div className="pointer-events-none absolute inset-0 grid-backdrop opacity-[0.07]" aria-hidden="true" />
       <div className="relative mx-auto w-full max-w-6xl px-5 sm:px-8">
+        {/* Phones only fit four arches, so the smallest outer tiles drop out below sm. */}
         <div className="flex items-end justify-center gap-2 sm:gap-4">
-          {LEFT.map((item) => (
-            <Tile key={item[0]} item={item} />
+          {LEFT.map((item, i) => (
+            <Tile key={item[0]} item={item} hideOnMobile={i === 0} />
           ))}
           <div className="hidden w-[clamp(4.5rem,11vw,8.5rem)] shrink-0 sm:block" aria-hidden="true" />
-          {RIGHT.map((item) => (
-            <Tile key={item[0]} item={item} />
+          {RIGHT.map((item, i) => (
+            <Tile key={item[0]} item={item} hideOnMobile={i === RIGHT.length - 1} />
           ))}
         </div>
+
 
         <Reveal className="relative mt-10 text-center sm:mt-4">
           <span className="eyebrow inline-flex rounded-full bg-secondary px-4 py-2 text-secondary-foreground">

@@ -18,6 +18,16 @@ const statusColor = { ok: "bg-ok", warn: "bg-warn" } as const;
 export function TrustNetwork() {
   const ref = useRef<HTMLDivElement>(null);
   const [lit, setLit] = useState(0);
+  // Pull the ring in on phones so the widest pills ("Cost Efficiency") stay on screen.
+  const [compact, setCompact] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 639px)");
+    const sync = () => setCompact(mq.matches);
+    sync();
+    mq.addEventListener("change", sync);
+    return () => mq.removeEventListener("change", sync);
+  }, []);
 
   useEffect(() => {
     const el = ref.current;
@@ -44,10 +54,11 @@ export function TrustNetwork() {
     };
   }, []);
 
-  const R = 38;
+  const R = compact ? 36 : 38;
 
   return (
     <div ref={ref} className="relative mx-auto aspect-square w-full max-w-[34rem]">
+
       <svg viewBox="0 0 100 100" className="absolute inset-0 size-full" aria-hidden="true">
         <circle cx="50" cy="50" r={R} fill="none" stroke="currentColor" className="text-azure-bright/15" strokeWidth="0.3" />
         <circle cx="50" cy="50" r={R * 0.62} fill="none" stroke="currentColor" className="text-azure-bright/10" strokeWidth="0.3" />
@@ -75,15 +86,18 @@ export function TrustNetwork() {
         })}
       </svg>
 
-      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-        <div className="glass-panel flex flex-col items-center px-6 py-5 text-center shadow-glow">
+      <div className="absolute left-1/2 top-1/2 w-[9.5rem] -translate-x-1/2 -translate-y-1/2 sm:w-auto">
+        <div className="glass-panel flex flex-col items-center px-4 py-4 text-center shadow-glow sm:px-6 sm:py-5">
           <span className="eyebrow text-azure-bright">Trust core</span>
-          <span className="mt-1 text-lg font-extrabold tracking-tight text-navy-foreground">ZENSUSTECH</span>
-          <span className="mt-1 text-[0.68rem] font-semibold text-navy-foreground/60">
+          <span className="mt-1 text-base font-extrabold tracking-tight text-navy-foreground sm:text-lg">
+            ZENSUSTECH
+          </span>
+          <span className="mt-1 text-[0.62rem] font-semibold text-navy-foreground/60 sm:text-[0.68rem]">
             {lit}/{NODES.length} signals live
           </span>
         </div>
       </div>
+
 
       {NODES.map((node, i) => {
         const angle = (i / NODES.length) * Math.PI * 2 - Math.PI / 2;
@@ -94,7 +108,7 @@ export function TrustNetwork() {
           <div
             key={node.label}
             className={cn(
-              "absolute -translate-x-1/2 -translate-y-1/2 whitespace-nowrap rounded-full border px-3 py-1.5 text-[0.65rem] font-bold transition-all duration-700 sm:text-xs",
+              "absolute -translate-x-1/2 -translate-y-1/2 whitespace-nowrap rounded-full border px-2 py-1 text-[0.55rem] font-bold transition-all duration-700 sm:px-3 sm:py-1.5 sm:text-xs",
               active
                 ? "border-azure-bright/45 bg-azure/25 text-navy-foreground opacity-100 shadow-glow"
                 : "border-navy-foreground/12 bg-navy-foreground/5 text-navy-foreground/45 opacity-70",

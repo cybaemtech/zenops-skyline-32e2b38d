@@ -25,7 +25,8 @@ const CHALLENGES = [
 ];
 
 const fieldClass =
-  "w-full rounded-xl border border-input bg-card px-4 py-3 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground/70 focus:border-primary focus:ring-2 focus:ring-ring/30";
+  // 16px on phones so iOS Safari doesn't zoom the viewport when a field is focused.
+  "w-full rounded-xl border border-input bg-card px-4 py-3 text-base text-foreground outline-none transition-colors placeholder:text-muted-foreground/70 focus:border-primary focus:ring-2 focus:ring-ring/30 sm:text-sm";
 const labelClass = "mb-2 block text-xs font-bold uppercase tracking-wider text-muted-foreground";
 
 export function ContactForm() {
