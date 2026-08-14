@@ -1,17 +1,25 @@
 import { useEffect, useRef, useState } from "react";
 import { Volume2, VolumeX } from "lucide-react";
-import audioAsset from "@/assets/home-ambient.mp3.asset.json";
+import homeAudio from "@/assets/home-ambient.mp3.asset.json";
 
-export function BackgroundAudio() {
+type BackgroundAudioProps = {
+  src?: string;
+  loop?: boolean;
+  volume?: number;
+};
+
+export function BackgroundAudio({ src = homeAudio.url, loop = true, volume = 0.35 }: BackgroundAudioProps) {
   const ref = useRef<HTMLAudioElement>(null);
   const [playing, setPlaying] = useState(false);
 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    el.volume = 0.35;
+    el.volume = volume;
+    let done = false;
 
     const tryPlay = () => {
+      if (done) return;
       el.play()
         .then(() => setPlaying(true))
         .catch(() => setPlaying(false));
@@ -19,8 +27,14 @@ export function BackgroundAudio() {
 
     tryPlay();
 
+    const onEnded = () => {
+      done = true;
+      setPlaying(false);
+    };
+    el.addEventListener("ended", onEnded);
+
     const onInteract = () => {
-      if (el.paused) tryPlay();
+      if (!done && el.paused) tryPlay();
       window.removeEventListener("pointerdown", onInteract);
       window.removeEventListener("keydown", onInteract);
     };
@@ -28,11 +42,12 @@ export function BackgroundAudio() {
     window.addEventListener("keydown", onInteract);
 
     return () => {
+      el.removeEventListener("ended", onEnded);
       window.removeEventListener("pointerdown", onInteract);
       window.removeEventListener("keydown", onInteract);
       el.pause();
     };
-  }, []);
+  }, [src, volume]);
 
   const toggle = () => {
     const el = ref.current;
@@ -47,7 +62,7 @@ export function BackgroundAudio() {
 
   return (
     <>
-      <audio ref={ref} src={audioAsset.url} loop preload="auto" />
+      <audio ref={ref} src={src} loop={loop} preload="auto" />
       <button
         type="button"
         onClick={toggle}
