@@ -10,33 +10,92 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as IndustriesRouteImport } from './routes/industries'
+import { Route as SolutionsRouteImport } from './routes/solutions'
+import { Route as ZenopsRouteImport } from './routes/zenops'
+import { Route as ZensustechRouteImport } from './routes/zensustech'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IndustriesRoute = IndustriesRouteImport.update({
+  id: '/industries',
+  path: '/industries',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SolutionsRoute = SolutionsRouteImport.update({
+  id: '/solutions',
+  path: '/solutions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ZenopsRoute = ZenopsRouteImport.update({
+  id: '/zenops',
+  path: '/zenops',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ZensustechRoute = ZensustechRouteImport.update({
+  id: '/zensustech',
+  path: '/zensustech',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/contact': typeof ContactRoute
+  '/industries': typeof IndustriesRoute
+  '/solutions': typeof SolutionsRoute
+  '/zenops': typeof ZenopsRoute
+  '/zensustech': typeof ZensustechRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/contact': typeof ContactRoute
+  '/industries': typeof IndustriesRoute
+  '/solutions': typeof SolutionsRoute
+  '/zenops': typeof ZenopsRoute
+  '/zensustech': typeof ZensustechRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/contact': typeof ContactRoute
+  '/industries': typeof IndustriesRoute
+  '/solutions': typeof SolutionsRoute
+  '/zenops': typeof ZenopsRoute
+  '/zensustech': typeof ZensustechRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    '/' | '/contact' | '/industries' | '/solutions' | '/zenops' | '/zensustech'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    '/' | '/contact' | '/industries' | '/solutions' | '/zenops' | '/zensustech'
+  id:
+    | '__root__'
+    | '/'
+    | '/contact'
+    | '/industries'
+    | '/solutions'
+    | '/zenops'
+    | '/zensustech'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ContactRoute: typeof ContactRoute
+  IndustriesRoute: typeof IndustriesRoute
+  SolutionsRoute: typeof SolutionsRoute
+  ZenopsRoute: typeof ZenopsRoute
+  ZensustechRoute: typeof ZensustechRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +107,51 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/industries': {
+      id: '/industries'
+      path: '/industries'
+      fullPath: '/industries'
+      preLoaderRoute: typeof IndustriesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solutions': {
+      id: '/solutions'
+      path: '/solutions'
+      fullPath: '/solutions'
+      preLoaderRoute: typeof SolutionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/zenops': {
+      id: '/zenops'
+      path: '/zenops'
+      fullPath: '/zenops'
+      preLoaderRoute: typeof ZenopsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/zensustech': {
+      id: '/zensustech'
+      path: '/zensustech'
+      fullPath: '/zensustech'
+      preLoaderRoute: typeof ZensustechRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ContactRoute: ContactRoute,
+  IndustriesRoute: IndustriesRoute,
+  SolutionsRoute: SolutionsRoute,
+  ZenopsRoute: ZenopsRoute,
+  ZensustechRoute: ZensustechRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
