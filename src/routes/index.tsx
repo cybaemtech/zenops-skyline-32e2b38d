@@ -19,6 +19,7 @@ import {
   Users,
   Workflow,
 } from "lucide-react";
+import { BackgroundAudio } from "@/components/site/BackgroundAudio";
 import { Reveal } from "@/components/site/Reveal";
 import { ArchitectureFlow, ZenOpsDiagram } from "@/components/site/ZenOpsDiagram";
 import {
