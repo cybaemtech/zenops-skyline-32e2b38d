@@ -2,8 +2,6 @@ import { createFileRoute } from "@tanstack/react-router";
 import {
   Activity,
   ArrowRight,
-  Boxes,
-  ChevronDown,
   CloudCog,
   Database,
   Factory,
@@ -19,15 +17,7 @@ import type { LucideIcon } from "lucide-react";
 import { useState } from "react";
 import { Reveal } from "@/components/site/Reveal";
 import { ArchitectureFlow } from "@/components/site/ZenOpsDiagram";
-import {
-  CtaBand,
-  CtaLink,
-  MetricCard,
-  Section,
-  SectionHead,
-  StatCard,
-  TestimonialCard,
-} from "@/components/site/primitives";
+import { CtaLink, MetricCard, Section, SectionHead, StatCard } from "@/components/site/primitives";
 import { cn } from "@/lib/utils";
 
 const TITLE = "Azure & Cloud Case Studies — Measurable Business Outcomes | ZensusTech";
