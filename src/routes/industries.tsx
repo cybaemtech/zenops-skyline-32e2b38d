@@ -108,16 +108,16 @@ function IndustriesPage() {
   return (
     <>
       <section className="relative overflow-hidden">
-        {/* Full-bleed hero background image */}
+        {/* Full-bleed hero background image — mirrored so cloud sits on the right */}
         <img
           src={splitImg}
           alt="Azure cloud operations network with connected nodes and data flows"
           width={1280}
           height={1280}
           loading="eager"
-          className="absolute inset-0 h-full w-full object-cover object-center"
+          className="absolute inset-0 h-full w-full scale-x-[-1] object-cover object-center"
         />
-        {/* Legibility overlays: darken base + right-side gradient for text */}
+        {/* Legibility overlays: darken base + left-side gradient for text */}
         <div
           className="pointer-events-none absolute inset-0 bg-navy/55"
           aria-hidden="true"
@@ -126,7 +126,7 @@ function IndustriesPage() {
           className="pointer-events-none absolute inset-0"
           style={{
             background:
-              "linear-gradient(to right, rgba(6,26,58,0.15) 0%, rgba(6,26,58,0.45) 35%, rgba(6,26,58,0.92) 100%)",
+              "linear-gradient(to right, rgba(6,26,58,0.92) 0%, rgba(6,26,58,0.45) 65%, rgba(6,26,58,0.15) 100%)",
           }}
           aria-hidden="true"
         />
