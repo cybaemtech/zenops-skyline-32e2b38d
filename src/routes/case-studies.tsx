@@ -488,50 +488,6 @@ function CaseStudiesPage() {
         </div>
       </Section>
 
-      {/* TESTIMONIALS */}
-      <Section>
-        <SectionHead eyebrow="Client voices" title="What Our Clients Say" />
-        <div className="mt-14 grid gap-6 lg:grid-cols-3">
-          {TESTIMONIALS.map((t, i) => (
-            <Reveal key={t.author} delay={i * 90}>
-              <TestimonialCard quote={t.quote} author={t.author} company={t.company} />
-            </Reveal>
-          ))}
-        </div>
-      </Section>
-
-      {/* FINAL */}
-      <Section tone="white">
-        <SectionHead
-          eyebrow="Final step"
-          title="Your Cloud Story Could Be the Next Success Story."
-          copy="ZensusTech can help you identify the problem, build the right solution and deliver measurable outcomes."
-        />
-        <div className="mx-auto mt-12 grid max-w-4xl gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {FINAL_NEEDS.map((n, i) => (
-            <Reveal key={n} delay={i * 60}>
-              <div className="flex h-full items-center gap-3 rounded-2xl border border-border bg-background px-5 py-4 text-sm font-semibold text-foreground">
-                <Boxes className="size-4 shrink-0 text-primary" aria-hidden="true" />
-                {n}
-              </div>
-            </Reveal>
-          ))}
-        </div>
-        <div className="mt-12 flex flex-wrap justify-center gap-3">
-          <CtaLink to="/contact">Book a Free Cloud Assessment</CtaLink>
-          <CtaLink to="/zenops" variant="ghost">
-            Explore ZenOps
-          </CtaLink>
-        </div>
-      </Section>
-
-      <CtaBand
-        eyebrow="Stay ahead of it"
-        title="Don't Wait for the Next Cloud Problem. See It Coming."
-        copy="Continuous Azure intelligence across security, cost, compliance and operations."
-        primary={{ label: "Book a ZenOps Demo", to: "/zenops" }}
-        secondary={{ label: "Check My Azure Environment", to: "/contact" }}
-      />
     </>
   );
 }
