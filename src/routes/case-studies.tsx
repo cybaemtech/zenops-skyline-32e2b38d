@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import {
   Activity,
   ArrowRight,
+  ChevronDown,
   CloudCog,
   Database,
   Factory,
