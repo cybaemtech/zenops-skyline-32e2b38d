@@ -10,6 +10,7 @@ import {
   ServiceCard,
 } from "@/components/site/primitives";
 import heroVideo from "@/assets/solutions-hero.mp4.asset.json";
+import heroPoster from "@/assets/solutions-hero-poster.webp";
 
 
 const TITLE = "Solutions — Azure Migration, Managed Cloud, Security, DevOps & FinOps | ZensusTech";
