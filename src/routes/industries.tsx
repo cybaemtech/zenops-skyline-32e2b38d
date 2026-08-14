@@ -123,10 +123,14 @@ function IndustriesPage() {
         {/* Full-bleed hero background image — mirrored so cloud sits on the right */}
         <img
           src={splitImg}
+          srcSet={`${splitImgSmall} 800w, ${splitImg} 1600w`}
+          sizes="100vw"
           alt="Azure cloud operations network with connected nodes and data flows"
-          width={1280}
-          height={1280}
+          width={1600}
+          height={1600}
           loading="eager"
+          fetchPriority="high"
+          decoding="async"
           className="absolute inset-0 h-full w-full scale-x-[-1] object-cover object-center"
         />
         {/* Legibility overlays: darken base + left-side gradient for text */}
