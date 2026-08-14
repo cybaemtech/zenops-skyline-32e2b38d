@@ -88,7 +88,6 @@ export function Navbar() {
               <Link
                 key={item.to}
                 to={item.to}
-                activeOptions={{ exact: item.to === "/" }}
                 onClick={() => setOpen(false)}
                 className="rounded-lg px-3 py-3 text-sm font-semibold text-muted-foreground hover:bg-accent hover:text-foreground"
                 activeProps={{ className: "bg-accent text-foreground" }}
