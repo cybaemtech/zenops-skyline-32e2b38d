@@ -22,18 +22,9 @@ export const Route = createFileRoute("/industries")({
       { property: "og:description", content: DESCRIPTION },
       { property: "og:url", content: "/industries" },
     ],
-    links: [
-      { rel: "canonical", href: "/industries" },
-      // Preload the LCP hero image so it starts downloading with the HTML.
-      {
-        rel: "preload",
-        as: "image",
-        href: splitImg,
-        imageSrcSet: `${splitImgSmall} 800w, ${splitImg} 1600w`,
-        imageSizes: "100vw",
-        fetchPriority: "high",
-      },
-    ],
+    // The hero <img> itself carries fetchPriority="high" + a responsive
+    // srcset, which is enough for the LCP without a duplicate preload fetch.
+    links: [{ rel: "canonical", href: "/industries" }],
   }),
   component: IndustriesPage,
 });
