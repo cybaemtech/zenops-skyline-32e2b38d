@@ -107,40 +107,37 @@ function IndustriesPage() {
 
   return (
     <>
-      <section className="relative overflow-hidden surface-mesh">
-        <div className="pointer-events-none absolute inset-0 grid-backdrop opacity-15 animate-grid-drift" aria-hidden="true" />
-        <div className="relative mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-10 px-5 py-20 sm:px-8 md:py-28 lg:grid-cols-2">
-          {/* Image left, fades to transparent on the right edge */}
-          <div className="relative order-1 min-h-[320px] lg:order-none">
-            <img
-              src={splitImg}
-              alt="Azure cloud operations network with connected nodes and data flows"
-              width={1280}
-              height={1280}
-              loading="eager"
-              className="absolute inset-0 h-full w-full object-cover"
-              style={{
-                maskImage: "linear-gradient(to right, #000 55%, transparent 100%)",
-                WebkitMaskImage: "linear-gradient(to right, #000 55%, transparent 100%)",
-              }}
-            />
-            <div
-              className="pointer-events-none absolute inset-0"
-              style={{
-                background:
-                  "linear-gradient(to right, transparent 60%, var(--color-surface) 100%)",
-              }}
-              aria-hidden="true"
-            />
-          </div>
-          {/* Content right */}
-          <div className="order-2 text-left lg:order-none lg:pl-4">
+      <section className="relative overflow-hidden">
+        {/* Full-bleed hero background image */}
+        <img
+          src={splitImg}
+          alt="Azure cloud operations network with connected nodes and data flows"
+          width={1280}
+          height={1280}
+          loading="eager"
+          className="absolute inset-0 h-full w-full object-cover object-center"
+        />
+        {/* Legibility overlays: darken base + right-side gradient for text */}
+        <div
+          className="pointer-events-none absolute inset-0 bg-navy/55"
+          aria-hidden="true"
+        />
+        <div
+          className="pointer-events-none absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(to right, rgba(6,26,58,0.15) 0%, rgba(6,26,58,0.45) 35%, rgba(6,26,58,0.92) 100%)",
+          }}
+          aria-hidden="true"
+        />
+        <div className="relative mx-auto flex w-full max-w-6xl flex-col items-start justify-center px-5 py-24 sm:px-8 md:py-32">
+          <div className="max-w-xl text-left">
             <Reveal>
               <p className="eyebrow text-azure-bright">Industries & use cases</p>
-              <h1 className="mt-5 text-4xl font-extrabold leading-[1.05] text-navy-foreground sm:text-5xl lg:text-6xl">
+              <h1 className="mt-5 text-4xl font-extrabold leading-[1.05] text-white sm:text-5xl lg:text-6xl">
                 Built Around the Problems Growing Businesses Actually Face
               </h1>
-              <p className="mt-6 max-w-xl text-base leading-relaxed text-navy-foreground/70 sm:text-lg">
+              <p className="mt-6 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
                 Business situation → cloud problem → ZenOps value → ZensusTech intervention.
               </p>
             </Reveal>
