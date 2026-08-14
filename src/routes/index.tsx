@@ -183,7 +183,7 @@ function Home() {
               compliance and cost—without requiring a large CloudOps or SecOps team.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
-              <CtaLink to="/contact">Check My Azure Environment</CtaLink>
+              <CtaLink to="/contact">Book Your Demo Today</CtaLink>
               <CtaLink to="/zenops" variant="onDark">
                 Explore ZenOps
               </CtaLink>
