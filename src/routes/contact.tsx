@@ -34,6 +34,8 @@ const CONTACTS = [
 function ContactPage() {
   return (
     <>
+      <BackgroundAudio src={contactAudio.url} loop={false} />
+
       <section className="relative overflow-hidden surface-mesh">
         <div className="pointer-events-none absolute inset-0 grid-backdrop opacity-15 animate-grid-drift" aria-hidden="true" />
         <div className="relative mx-auto w-full max-w-4xl px-5 py-20 text-center sm:px-8 md:py-24">
