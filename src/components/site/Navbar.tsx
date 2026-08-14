@@ -8,6 +8,7 @@ const NAV = [
   { label: "Solutions", to: "/solutions" },
   { label: "Industries", to: "/industries" },
   { label: "Case Studies", to: "/case-studies" },
+  { label: "Trust", to: "/trust" },
 ] as const;
 
 export function Navbar() {

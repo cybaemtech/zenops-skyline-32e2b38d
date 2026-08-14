@@ -14,6 +14,7 @@ import { Route as CaseStudiesRouteImport } from './routes/case-studies'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as IndustriesRouteImport } from './routes/industries'
 import { Route as SolutionsRouteImport } from './routes/solutions'
+import { Route as TrustRouteImport } from './routes/trust'
 import { Route as ZenopsRouteImport } from './routes/zenops'
 
 const IndexRoute = IndexRouteImport.update({
@@ -41,6 +42,11 @@ const SolutionsRoute = SolutionsRouteImport.update({
   path: '/solutions',
   getParentRoute: () => rootRouteImport,
 } as any)
+const TrustRoute = TrustRouteImport.update({
+  id: '/trust',
+  path: '/trust',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ZenopsRoute = ZenopsRouteImport.update({
   id: '/zenops',
   path: '/zenops',
@@ -53,6 +59,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/industries': typeof IndustriesRoute
   '/solutions': typeof SolutionsRoute
+  '/trust': typeof TrustRoute
   '/zenops': typeof ZenopsRoute
 }
 export interface FileRoutesByTo {
@@ -61,6 +68,7 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/industries': typeof IndustriesRoute
   '/solutions': typeof SolutionsRoute
+  '/trust': typeof TrustRoute
   '/zenops': typeof ZenopsRoute
 }
 export interface FileRoutesById {
@@ -70,6 +78,7 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/industries': typeof IndustriesRoute
   '/solutions': typeof SolutionsRoute
+  '/trust': typeof TrustRoute
   '/zenops': typeof ZenopsRoute
 }
 export interface FileRouteTypes {
@@ -80,6 +89,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/industries'
     | '/solutions'
+    | '/trust'
     | '/zenops'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -88,6 +98,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/industries'
     | '/solutions'
+    | '/trust'
     | '/zenops'
   id:
     | '__root__'
@@ -96,6 +107,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/industries'
     | '/solutions'
+    | '/trust'
     | '/zenops'
   fileRoutesById: FileRoutesById
 }
@@ -105,6 +117,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   IndustriesRoute: typeof IndustriesRoute
   SolutionsRoute: typeof SolutionsRoute
+  TrustRoute: typeof TrustRoute
   ZenopsRoute: typeof ZenopsRoute
 }
 
@@ -145,6 +158,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SolutionsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/trust': {
+      id: '/trust'
+      path: '/trust'
+      fullPath: '/trust'
+      preLoaderRoute: typeof TrustRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/zenops': {
       id: '/zenops'
       path: '/zenops'
@@ -161,6 +181,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   IndustriesRoute: IndustriesRoute,
   SolutionsRoute: SolutionsRoute,
+  TrustRoute: TrustRoute,
   ZenopsRoute: ZenopsRoute,
 }
 export const routeTree = rootRouteImport
