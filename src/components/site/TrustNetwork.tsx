@@ -18,6 +18,16 @@ const statusColor = { ok: "bg-ok", warn: "bg-warn" } as const;
 export function TrustNetwork() {
   const ref = useRef<HTMLDivElement>(null);
   const [lit, setLit] = useState(0);
+  // Pull the ring in on phones so the widest pills ("Cost Efficiency") stay on screen.
+  const [compact, setCompact] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 639px)");
+    const sync = () => setCompact(mq.matches);
+    sync();
+    mq.addEventListener("change", sync);
+    return () => mq.removeEventListener("change", sync);
+  }, []);
 
   useEffect(() => {
     const el = ref.current;
@@ -44,10 +54,11 @@ export function TrustNetwork() {
     };
   }, []);
 
-  const R = 38;
+  const R = compact ? 28 : 38;
 
   return (
     <div ref={ref} className="relative mx-auto aspect-square w-full max-w-[34rem]">
+
       <svg viewBox="0 0 100 100" className="absolute inset-0 size-full" aria-hidden="true">
         <circle cx="50" cy="50" r={R} fill="none" stroke="currentColor" className="text-azure-bright/15" strokeWidth="0.3" />
         <circle cx="50" cy="50" r={R * 0.62} fill="none" stroke="currentColor" className="text-azure-bright/10" strokeWidth="0.3" />
