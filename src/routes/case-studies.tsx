@@ -281,35 +281,6 @@ const WAITING = [
   "an infrastructure bottleneck",
 ];
 
-const TESTIMONIALS = [
-  {
-    quote:
-      "ZensusTech transformed our cloud infrastructure completely. Their Azure migration strategy was flawless, and the cost savings exceeded our expectations. The team's expertise and dedication are exceptional.",
-    author: "Sourabh Tiwari — Chief Technology Officer",
-    company: "Codinker · IT Services Company",
-  },
-  {
-    quote:
-      "The DevOps automation implementation by ZensusTech revolutionized our development process. Deployment times went from hours to minutes, and our team's productivity tripled. Highly recommended!",
-    author: "Vijender Singh — Founder & CEO",
-    company: "ByteKode Labs · SaaS Platform",
-  },
-  {
-    quote:
-      "As a growing real estate platform, we needed reliable cloud infrastructure. ZensusTech provided 24/7 managed services that ensured our platform never went down during peak traffic. Outstanding support!",
-    author: "Thejes Gowda — Operations Director",
-    company: "UrbanVistaa · Real Estate Platform",
-  },
-];
-
-const FINAL_NEEDS = [
-  "Reduce cloud costs",
-  "Improve security",
-  "Prepare for compliance",
-  "Accelerate deployments",
-  "Modernize infrastructure",
-  "Operate Azure more effectively",
-];
 
 function CaseStudiesPage() {
   const [openId, setOpenId] = useState<string | null>("cs-01");
