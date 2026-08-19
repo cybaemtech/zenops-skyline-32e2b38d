@@ -9,7 +9,6 @@ import {
   SectionHead,
   ServiceCard,
 } from "@/components/site/primitives";
-import heroVideo from "@/assets/solutions-hero.mp4.asset.json";
 import heroPoster from "@/assets/solutions-hero-poster.webp";
 
 
@@ -137,7 +136,7 @@ function HeroVideo() {
 
   useEffect(() => {
     if (shouldSkipVideo()) return;
-    setSrc(heroVideo.url);
+    setSrc("/media/solutions-hero.mp4");
   }, []);
 
   useEffect(() => {

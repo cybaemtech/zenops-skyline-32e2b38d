@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Volume2, VolumeX } from "lucide-react";
-import homeAudio from "@/assets/home-ambient.mp3.asset.json";
 
 type BackgroundAudioProps = {
   src?: string;
@@ -17,7 +16,7 @@ type BackgroundAudioProps = {
  * connections spend their bandwidth on content first. Data-saver users never
  * download it at all unless they press the button.
  */
-export function BackgroundAudio({ src = homeAudio.url, loop = true, volume = 0.35 }: BackgroundAudioProps) {
+export function BackgroundAudio({ src = "/media/home-ambient.mp3", loop = true, volume = 0.35 }: BackgroundAudioProps) {
   const ref = useRef<HTMLAudioElement>(null);
   const [playing, setPlaying] = useState(false);
   const [armed, setArmed] = useState(false);
