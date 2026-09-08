@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
-import { Coins, DatabaseZap, Gauge, Mail, Network, ShieldCheck } from "lucide-react";
+import { Coins, DatabaseZap, Gauge, Globe2, Layers3, Mail, Network, ShieldCheck, Sparkles } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
 import {
   CloudPlatformCard,
@@ -178,6 +178,49 @@ function HeroVideo() {
   );
 }
 
+const PLATFORM_PILLARS = [
+  {
+    icon: Sparkles,
+    label: "ZenAiOps™",
+    detail: "Product / platform",
+  },
+  {
+    icon: Layers3,
+    label: "Azure",
+    detail: "Initial depth and strongest capability",
+  },
+  {
+    icon: Globe2,
+    label: "ZensusTech Services",
+    detail: "Multi-cloud",
+  },
+] as const;
+
+function PlatformPillars() {
+  return (
+    <div className="relative mx-auto mt-12 max-w-5xl" aria-label="Platform pillars">
+      <div className="pointer-events-none absolute left-[16.5%] right-[16.5%] top-10 hidden border-t border-dashed border-primary/35 md:block">
+        <span className="absolute -top-px left-1/3 h-px w-1/4 animate-dash bg-primary/70" />
+      </div>
+      <div className="grid gap-8 md:grid-cols-3 md:gap-5">
+        {PLATFORM_PILLARS.map(({ icon: Icon, label, detail }, index) => (
+          <div key={label} className="relative text-center">
+            <div
+              className="relative mx-auto flex size-20 items-center justify-center rounded-full border border-primary/30 bg-accent text-primary shadow-glow"
+              style={{ animationDelay: `${index * 180}ms` }}
+            >
+              <span className="absolute inset-1 rounded-full border border-primary/20 animate-pulse-node" />
+              <Icon className="relative z-10 size-7" strokeWidth={1.7} aria-hidden="true" />
+            </div>
+            <p className="mt-4 font-bold text-foreground">{label}</p>
+            <p className="mt-1 text-sm text-muted-foreground">{detail}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function SolutionsPage() {
   return (
     <>
@@ -202,8 +245,15 @@ function SolutionsPage() {
         <SectionHead
           eyebrow="Platforms"
           title="ZenAI-Ops Is Cloud-Focused. ZensusTech Services Are Multi-Cloud."
-          copy="Built with Azure depth. Designed for the multi-cloud enterprise. ZenAiOps™ is purpose-built for cloud operations, delivering deep visibility, automation, security, FinOps, and optimization across cloud environments. ZensusTech extends these capabilities across major cloud platforms, helping organizations securely manage, optimize, and transform their multi-cloud operations."
+          copy={
+            <>
+              <span>Built with Azure depth. Designed for the multi-cloud enterprise.</span>
+              <br />
+              <span>ZenAiOps™ is purpose-built for cloud operations, delivering deep visibility, automation, security, FinOps, and optimization across cloud environments. ZensusTech extends these capabilities across major cloud platforms, helping organizations securely manage, optimize, and transform their multi-cloud operations.</span>
+            </>
+          }
         />
+        <PlatformPillars />
         <div className="mt-14 grid gap-5 md:grid-cols-3">
           <Reveal>
             <CloudPlatformCard

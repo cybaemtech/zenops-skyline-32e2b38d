@@ -393,7 +393,7 @@ export function CloudPlatformCard({
       )}
     >
       <h3 className="text-xl font-bold">{name}</h3>
-      <p className={cn("eyebrow mt-2", featured ? "text-primary" : "text-muted-foreground")}>{role}</p>
+      <p className="eyebrow mt-2 text-primary">{role}</p>
       <ul className="mt-5 space-y-2 text-sm text-muted-foreground">
         {points.map((p) => (
           <li key={p} className="flex gap-2">
