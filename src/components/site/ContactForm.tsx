@@ -3,7 +3,7 @@ import { CheckCircle2 } from "lucide-react";
 
 const COMPANY_SIZES = ["1–20", "21–50", "51–100", "101–250", "251–500", "500+"];
 const CLOUDS = ["Microsoft Cloud", "AWS", "Google Cloud", "Hybrid / Multi-cloud", "On-premises", "Not sure"];
-const AZURE_SIZE = [
+const CLOUD_SIZE = [
   "1 subscription",
   "2–5 subscriptions",
   "6–15 subscriptions",
@@ -120,12 +120,12 @@ export function ContactForm() {
           </select>
         </div>
         <div>
-          <label className={labelClass} htmlFor="azureSize">
+          <label className={labelClass} htmlFor="cloudSize">
             Cloud Environment Size
           </label>
-          <select id="azureSize" name="azureSize" className={fieldClass} defaultValue="">
+          <select id="cloudSize" name="cloudSize" className={fieldClass} defaultValue="">
             <option value="">Select</option>
-            {AZURE_SIZE.map((o) => (
+            {CLOUD_SIZE.map((o) => (
               <option key={o}>{o}</option>
             ))}
           </select>

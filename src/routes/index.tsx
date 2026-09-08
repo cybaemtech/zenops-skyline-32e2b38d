@@ -190,7 +190,7 @@ function Home() {
             </div>
             <p className="mt-7 inline-flex items-center gap-2 text-sm font-bold text-navy-foreground/60">
               <BadgeCheck className="size-4 text-azure-bright" aria-hidden="true" />
-              Built for Azure-first growing businesses
+              Built for cloud-first growing businesses
             </p>
           </Reveal>
           <Reveal delay={120}>

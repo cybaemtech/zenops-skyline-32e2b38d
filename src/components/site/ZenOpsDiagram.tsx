@@ -86,12 +86,12 @@ export function ZenOpsDiagram() {
 }
 
 export function ArchitectureFlow() {
-  const azureLayer = ["Subscriptions", "VMs", "Storage", "SQL", "Identity", "Networking", "Applications"];
+  const cloudLayer = ["Subscriptions", "VMs", "Storage", "SQL", "Identity", "Networking", "Applications"];
   return (
     <div className="rounded-3xl border border-border bg-card p-6 shadow-soft sm:p-10">
       <p className="eyebrow text-muted-foreground">Cloud layer</p>
       <ul className="mt-4 flex flex-wrap gap-2.5">
-        {azureLayer.map((item) => (
+        {cloudLayer.map((item) => (
           <li
             key={item}
             className="rounded-xl border border-border bg-secondary/70 px-3.5 py-2 text-xs font-bold text-secondary-foreground"

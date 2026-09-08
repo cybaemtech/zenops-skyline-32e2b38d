@@ -201,7 +201,7 @@ function SolutionsPage() {
       <Section tone="white">
         <SectionHead
           eyebrow="Platforms"
-          title="ZenAI-Ops Is Azure-Focused. ZensusTech Services Are Multi-Cloud."
+          title="ZenAI-Ops Is Cloud-Focused. ZensusTech Services Are Multi-Cloud."
           copy="The product goes deep on Cloud. Our delivery teams work across the major cloud platforms."
         />
         <div className="mt-14 grid gap-5 md:grid-cols-3">
