@@ -211,10 +211,10 @@ function SolutionsPage() {
               name="Microsoft Azure"
               role="ZenAI-Ops + services"
               points={[
-                "ZenAI-Ops intelligence layer",
+                "ZenAiOps™ + Services\n\n\nZenAiOps™ Intelligence Layer\n\n",
                 "Security, identity and governance visibility",
                 "Cost and operational optimization",
-                "Managed Cloud operations",
+                "Azure Managed Services",
               ]}
             />
           </Reveal>
