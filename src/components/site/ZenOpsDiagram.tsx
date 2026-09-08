@@ -13,7 +13,7 @@ const SIGNALS: { label: string; icon: LucideIcon }[] = [
 const OUTPUTS = ["Secure", "Optimize", "Govern", "Operate"];
 
 /**
- * Signature brand visual: Azure signals converging into the ZenOps
+ * Signature brand visual: Azure signals converging into the ZenAI-Ops
  * intelligence layer, then resolving into four business outcomes.
  * Conceptual illustration — not live customer data.
  */
@@ -47,7 +47,7 @@ export function ZenOpsDiagram() {
         viewBox="0 0 400 70"
         className="relative mt-4 h-16 w-full"
         role="img"
-        aria-label="Azure signals converging into the ZenOps intelligence layer"
+        aria-label="Azure signals converging into the ZenAI-Ops intelligence layer"
       >
         {[40, 120, 200, 280, 360].map((x) => (
           <path
@@ -63,7 +63,7 @@ export function ZenOpsDiagram() {
       </svg>
 
       <div className="relative rounded-2xl border border-azure/40 bg-navy-foreground/8 p-5 text-center shadow-glow">
-        <p className="text-2xl font-black tracking-tight text-navy-foreground">ZENOPS</p>
+        <p className="text-2xl font-black tracking-tight text-navy-foreground">ZenAI-Ops</p>
         <p className="mt-1 text-xs font-bold uppercase tracking-[0.2em] text-azure-bright">
           Secure • Optimize • Govern • Operate
         </p>
@@ -116,7 +116,7 @@ export function ArchitectureFlow() {
       </svg>
 
       <div className="rounded-2xl surface-navy p-6 text-center">
-        <p className="eyebrow text-azure-bright">ZenOps intelligence layer</p>
+        <p className="eyebrow text-azure-bright">ZenAI-Ops intelligence layer</p>
         <p className="mt-2 text-lg font-bold text-navy-foreground">
           Correlates security, identity, cost, compliance and operational signals
         </p>

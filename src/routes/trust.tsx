@@ -171,7 +171,7 @@ const PROBLEMS = [
   {
     key: "Compliance",
     concern: "No continuous evidence for audits",
-    capability: "Policy baselines + governance reporting via ZenOps",
+    capability: "Policy baselines + governance reporting via ZenAI-Ops",
     outcome: "Continuous compliance evidence instead of quarterly snapshots",
   },
   {
@@ -542,7 +542,7 @@ function ZenOpsBridge() {
           invert
           eyebrow="Trust, continuously"
           title="What If You Could See the Risk Before Your Customer Does?"
-          copy="Trust should not depend on a quarterly review. ZenOps is designed to provide continuous intelligence across your Azure environment, helping teams identify security, operational, compliance and cost concerns earlier."
+          copy="Trust should not depend on a quarterly review. ZenAI-Ops is designed to provide continuous intelligence across your Azure environment, helping teams identify security, operational, compliance and cost concerns earlier."
         />
         <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {ZENOPS_PILLARS.map((p, i) => (
@@ -564,10 +564,10 @@ function ZenOpsBridge() {
           <ArrowRight className="size-4 text-azure-bright" aria-hidden="true" />
           <span>Continuous cloud intelligence</span>
           <ArrowRight className="size-4 text-azure-bright" aria-hidden="true" />
-          <span className="text-azure-bright">ZenOps</span>
+          <span className="text-azure-bright">ZenAI-Ops</span>
         </Reveal>
         <div className="mt-9 flex justify-center">
-          <CtaLink to="/zenops">Explore ZenOps</CtaLink>
+          <CtaLink to="/zenops">Explore ZenAI-Ops</CtaLink>
         </div>
       </div>
     </Section>
@@ -772,7 +772,7 @@ function FinalCta() {
         <div className="mt-9 flex flex-wrap justify-center gap-3">
           <CtaLink to="/contact">Book a Free Cloud Assessment</CtaLink>
           <CtaLink to="/zenops" variant="onDark">
-            Explore ZenOps
+            Explore ZenAI-Ops
           </CtaLink>
         </div>
         <p className="mx-auto mt-12 max-w-2xl text-sm italic text-navy-foreground/60">

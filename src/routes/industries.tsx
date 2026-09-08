@@ -9,9 +9,9 @@ import { cn } from "@/lib/utils";
 import splitImg from "@/assets/industries-split.webp";
 import splitImgSmall from "@/assets/industries-split-800.webp";
 
-const TITLE = "Industries & Azure Use Cases — SaaS, Retail, Manufacturing, Finance | ZenOps";
+const TITLE = "Industries & Azure Use Cases — SaaS, Retail, Manufacturing, Finance | ZenAI-Ops";
 const DESCRIPTION =
-  "See how ZenOps and ZensusTech address real Azure problems by industry: cost, security, compliance readiness, identity risk and operational visibility.";
+  "See how ZenAI-Ops and ZensusTech address real Azure problems by industry: cost, security, compliance readiness, identity risk and operational visibility.";
 
 export const Route = createFileRoute("/industries")({
   head: () => ({
@@ -77,7 +77,7 @@ const INDUSTRIES = [
 const USE_CASES = [
   {
     q: "Is Azure spending too much?",
-    a: "ZenOps highlights idle resources, overprovisioned infrastructure and spend patterns that drift over time. ZensusTech cost optimization then handles right-sizing, budget governance and savings reporting.",
+    a: "ZenAI-Ops highlights idle resources, overprovisioned infrastructure and spend patterns that drift over time. ZensusTech cost optimization then handles right-sizing, budget governance and savings reporting.",
   },
   {
     q: "Are we actually secure?",
@@ -85,7 +85,7 @@ const USE_CASES = [
   },
   {
     q: "Are we audit-ready?",
-    a: "ZenOps is designed to keep policy alignment, control visibility and supporting evidence in one place, so audits and customer security questionnaires do not start from scratch every time.",
+    a: "ZenAI-Ops is designed to keep policy alignment, control visibility and supporting evidence in one place, so audits and customer security questionnaires do not start from scratch every time.",
   },
   {
     q: "Do we have risky identities?",
@@ -101,7 +101,7 @@ const USE_CASES = [
   },
   {
     q: "Do we need more CloudOps capacity?",
-    a: "If your team is stretched, ZenOps extends how much Azure surface a small team can cover, and ZensusTech managed cloud services add capacity without hiring a specialist function.",
+    a: "If your team is stretched, ZenAI-Ops extends how much Azure surface a small team can cover, and ZensusTech managed cloud services add capacity without hiring a specialist function.",
   },
 ];
 
@@ -145,7 +145,7 @@ function IndustriesPage() {
                 Built Around the Problems Growing Businesses Actually Face
               </h1>
               <p className="mt-6 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
-                Business situation → cloud problem → ZenOps value → ZensusTech intervention.
+                Business situation → cloud problem → ZenAI-Ops value → ZensusTech intervention.
               </p>
             </Reveal>
           </div>
@@ -211,7 +211,7 @@ function IndustriesPage() {
         title="Get My Azure Health Check"
         copy="Tell us which question matters most and we'll start there."
         primary={{ label: "Book Your Demo Today", to: "/contact" }}
-        secondary={{ label: "Book a ZenOps Demo", to: "/zenops" }}
+        secondary={{ label: "Book a ZenAI-Ops Demo", to: "/zenops" }}
       />
     </>
   );

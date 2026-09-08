@@ -18,8 +18,8 @@ export function Footer() {
           </p>
         </div>
 
-        <nav aria-label="ZenOps and Solutions">
-          <h2 className="eyebrow text-navy-foreground/60">ZenOps</h2>
+        <nav aria-label="ZenAI-Ops and Solutions">
+          <h2 className="eyebrow text-navy-foreground/60">ZenAI-Ops</h2>
           <ul className="mt-4 space-y-2 text-sm text-navy-foreground/75">
             <li>
               <Link to="/zenops" className="inline-block py-1.5 hover:text-azure-bright">
@@ -91,7 +91,7 @@ export function Footer() {
       </div>
       <div className="border-t border-navy-foreground/10 py-6">
         <p className="mx-auto max-w-7xl px-5 text-xs text-navy-foreground/50 sm:px-8">
-          © {new Date().getFullYear()} ZensusTech. ZenOps is a product of ZensusTech.
+          © {new Date().getFullYear()} ZensusTech. ZenAI-Ops is a product of ZensusTech.
         </p>
       </div>
     </footer>

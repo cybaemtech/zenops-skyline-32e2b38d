@@ -14,7 +14,7 @@ import heroPoster from "@/assets/solutions-hero-poster.webp";
 
 const TITLE = "Solutions — Azure Migration, Managed Cloud, Security, DevOps & FinOps | ZensusTech";
 const DESCRIPTION =
-  "Use ZenOps to understand your cloud environment and ZensusTech expertise to transform it: migration, managed cloud services, security and compliance, DevOps, cost optimization and Microsoft 365.";
+  "Use ZenAI-Ops to understand your cloud environment and ZensusTech expertise to transform it: migration, managed cloud services, security and compliance, DevOps, cost optimization and Microsoft 365.";
 
 export const Route = createFileRoute("/solutions")({
   head: () => ({
@@ -201,7 +201,7 @@ function SolutionsPage() {
       <Section tone="white">
         <SectionHead
           eyebrow="Platforms"
-          title="ZenOps Is Azure-Focused. ZensusTech Services Are Multi-Cloud."
+          title="ZenAI-Ops Is Azure-Focused. ZensusTech Services Are Multi-Cloud."
           copy="The product goes deep on Azure. Our delivery teams work across the major cloud platforms."
         />
         <div className="mt-14 grid gap-5 md:grid-cols-3">
@@ -209,9 +209,9 @@ function SolutionsPage() {
             <CloudPlatformCard
               featured
               name="Microsoft Azure"
-              role="ZenOps + services"
+              role="ZenAI-Ops + services"
               points={[
-                "ZenOps intelligence layer",
+                "ZenAI-Ops intelligence layer",
                 "Security, identity and governance visibility",
                 "Cost and operational optimization",
                 "Managed Azure operations",
@@ -239,7 +239,7 @@ function SolutionsPage() {
         eyebrow="Next step"
         title="Find the Right Cloud Strategy for Your Business"
         primary={{ label: "Book Free Cloud Assessment", to: "/contact" }}
-        secondary={{ label: "Explore ZenOps", to: "/zenops" }}
+        secondary={{ label: "Explore ZenAI-Ops", to: "/zenops" }}
       />
     </>
   );

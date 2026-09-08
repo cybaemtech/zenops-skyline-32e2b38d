@@ -23,9 +23,9 @@ import {
   SectionHead,
 } from "@/components/site/primitives";
 
-const TITLE = "ZenOps — Intelligent Azure Operations, Security, Compliance & Cost Platform";
+const TITLE = "ZenAI-Ops — Intelligent Azure Operations, Security, Compliance & Cost Platform";
 const DESCRIPTION =
-  "ZenOps unifies Azure security, identity, cost, compliance and operational signals into one intelligence layer: see, understand, act and prove.";
+  "ZenAI-Ops unifies Azure security, identity, cost, compliance and operational signals into one intelligence layer: see, understand, act and prove.";
 
 export const Route = createFileRoute("/zenops")({
   head: () => ({
@@ -44,7 +44,7 @@ export const Route = createFileRoute("/zenops")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "SoftwareApplication",
-          name: "ZenOps",
+          name: "ZenAI-Ops",
           applicationCategory: "BusinessApplication",
           operatingSystem: "Cloud",
           description: DESCRIPTION,
@@ -86,16 +86,16 @@ function ZenOpsPage() {
         <div className="pointer-events-none absolute inset-0 grid-backdrop opacity-15 animate-grid-drift" aria-hidden="true" />
         <div className="relative mx-auto w-full max-w-4xl px-5 py-20 text-center sm:px-8 md:py-28">
           <Reveal>
-            <p className="eyebrow text-azure-bright">ZenOps — Intelligent Azure Operations</p>
+            <p className="eyebrow text-azure-bright">ZenAI-Ops — Intelligent Azure Operations</p>
             <h1 className="mt-5 text-4xl font-extrabold leading-[1.05] text-navy-foreground sm:text-5xl lg:text-6xl">
               One Intelligence Layer for Your Entire Azure Environment.
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-navy-foreground/70 sm:text-lg">
-              ZenOps continuously brings together the signals that matter across Azure security, operations,
+              ZenAI-Ops continuously brings together the signals that matter across Azure security, operations,
               governance and cost—so your team can see what matters, understand why it matters and act faster.
             </p>
             <div className="mt-9 flex flex-wrap justify-center gap-3">
-              <CtaLink to="/contact">Book a ZenOps Demo</CtaLink>
+              <CtaLink to="/contact">Book a ZenAI-Ops Demo</CtaLink>
               <CtaLink to="/contact" variant="onDark">
                 Request Azure Health Check
               </CtaLink>
@@ -108,7 +108,7 @@ function ZenOpsPage() {
         <SectionHead
           eyebrow="Product visualization"
           title="A Command Center for Your Azure Estate"
-          copy="A conceptual view of how ZenOps presents health, risk, cost and compliance signals side by side."
+          copy="A conceptual view of how ZenAI-Ops presents health, risk, cost and compliance signals side by side."
         />
         <Reveal className="mt-14">
           <ProductDashboard />
@@ -137,7 +137,7 @@ function ZenOpsPage() {
         <SectionHead
           eyebrow="Capability matrix"
           title="Six Capabilities, One Operational Picture"
-          copy="Capabilities describe how ZenOps is positioned to support your Azure environment."
+          copy="Capabilities describe how ZenAI-Ops is positioned to support your Azure environment."
         />
         <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {CAPABILITIES.map((c, i) => (
@@ -149,7 +149,7 @@ function ZenOpsPage() {
       </Section>
 
       <Section tone="navy">
-        <SectionHead eyebrow="Built for your role" title="What ZenOps Means for Your Team" invert />
+        <SectionHead eyebrow="Built for your role" title="What ZenAI-Ops Means for Your Team" invert />
         <div className="mt-14 grid gap-5 sm:grid-cols-2">
           {PERSONAS.map((p, i) => (
             <Reveal key={p.role} delay={i * 70}>
@@ -177,7 +177,7 @@ function ZenOpsPage() {
 
       <CtaBand
         eyebrow="Assessment"
-        title="What Would ZenOps Find in Your Azure Environment?"
+        title="What Would ZenAI-Ops Find in Your Azure Environment?"
         copy="We'll walk your environment with you and show where the risk, waste and gaps are concentrated."
         primary={{ label: "Book My Azure Assessment", to: "/contact" }}
         secondary={{ label: "Talk to a Cloud Expert", to: "/solutions" }}

@@ -309,7 +309,7 @@ export function IndustryCard({
       </p>
       <div className="mt-6 grid gap-4 sm:grid-cols-2">
         <div className="rounded-2xl border border-primary/20 bg-accent/60 p-4">
-          <p className="eyebrow text-primary">ZenOps value</p>
+          <p className="eyebrow text-primary">ZenAI-Ops value</p>
           <ul className="mt-2 space-y-1.5 text-sm font-semibold text-accent-foreground">
             {zenops.map((z) => (
               <li key={z}>{z}</li>
