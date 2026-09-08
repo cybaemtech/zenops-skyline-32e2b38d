@@ -208,7 +208,7 @@ function SolutionsPage() {
           <Reveal>
             <CloudPlatformCard
               featured
-              name="Microsoft Cloud"
+              name="Microsoft Azure"
               role="ZenAI-Ops + services"
               points={[
                 "ZenAI-Ops intelligence layer",
