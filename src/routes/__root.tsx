@@ -104,7 +104,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@type": "Organization",
           name: "ZensusTech",
           description:
-            "Next-generation cloud technology and digital solutions company, and maker of ZenOps — an intelligent Azure operations, security, compliance and optimization platform.",
+            "Next-generation cloud technology and digital solutions company, and maker of ZenAI-Ops — an intelligent Azure operations, security, compliance and optimization platform.",
           email: "info@zensustech.com",
           telephone: "+91 9823 10 11 12",
           areaServed: ["IN", "GB"],

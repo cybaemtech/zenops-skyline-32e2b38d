@@ -4,7 +4,7 @@ import { ContactForm } from "@/components/site/ContactForm";
 import { Reveal } from "@/components/site/Reveal";
 import { CtaBand, Section } from "@/components/site/primitives";
 
-const TITLE = "Book an Azure Assessment — ZenOps & ZensusTech Cloud Experts";
+const TITLE = "Book an Azure Assessment — ZenAI-Ops & ZensusTech Cloud Experts";
 const DESCRIPTION =
   "Tell us about your Azure environment and challenges across security, compliance, cost and operations. We'll help identify the right next step.";
 
@@ -86,7 +86,7 @@ function ContactPage() {
       <CtaBand
         title="Your Azure Environment Shouldn't Be a Black Box."
         primary={{ label: "Book My Azure Assessment", to: "/contact" }}
-        secondary={{ label: "Talk to a ZenOps Expert", to: "/zenops" }}
+        secondary={{ label: "Talk to a ZenAI-Ops Expert", to: "/zenops" }}
       />
     </>
   );

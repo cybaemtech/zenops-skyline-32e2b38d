@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 
 const NAV = [
-  { label: "ZenOps", to: "/zenops" },
+  { label: "ZenAI-Ops", to: "/zenops" },
   { label: "Solutions", to: "/solutions" },
   { label: "Industries", to: "/industries" },
   { label: "Case Studies", to: "/case-studies" },
@@ -44,7 +44,7 @@ export function Navbar() {
           <span className="leading-tight">
             <span className="block text-base font-extrabold tracking-tight">ZensusTech</span>
             <span className="block text-[0.62rem] font-bold uppercase tracking-[0.16em] text-muted-foreground">
-              ZenOps Platform
+              ZenAI-Ops Platform
             </span>
           </span>
         </Link>

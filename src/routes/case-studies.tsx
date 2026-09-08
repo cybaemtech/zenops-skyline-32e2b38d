@@ -302,7 +302,7 @@ function CaseStudiesPage() {
               <div className="mt-9 flex flex-wrap gap-3">
                 <CtaLink to="/contact">Check My Azure Environment</CtaLink>
                 <CtaLink to="/zenops" variant="onDark">
-                  Book a ZenOps Demo
+                  Book a ZenAI-Ops Demo
                 </CtaLink>
               </div>
             </Reveal>
@@ -410,14 +410,14 @@ function CaseStudiesPage() {
         </div>
       </Section>
 
-      {/* BRIDGE TO ZENOPS */}
+      {/* BRIDGE TO ZenAI-Ops */}
       <Section tone="mesh">
         <div className="pointer-events-none absolute inset-0 grid-backdrop opacity-15 animate-grid-drift" aria-hidden="true" />
         <SectionHead
           invert
-          eyebrow="From case study to ZenOps"
+          eyebrow="From case study to ZenAI-Ops"
           title="What If You Could See These Problems Before They Become Projects?"
-          copy="The engagements above demonstrate what happens when cloud problems are identified and addressed. ZenOps takes that thinking one step further."
+          copy="The engagements above demonstrate what happens when cloud problems are identified and addressed. ZenAI-Ops takes that thinking one step further."
         />
         <div className="relative mt-14 grid items-start gap-12 lg:grid-cols-2">
           <Reveal>
@@ -434,13 +434,13 @@ function CaseStudiesPage() {
               ))}
             </ul>
             <p className="mt-7 text-base leading-relaxed text-navy-foreground/75">
-              ZenOps is designed to provide continuous intelligence across your Azure environment so your team can
+              ZenAI-Ops is designed to provide continuous intelligence across your Azure environment so your team can
               identify what needs attention earlier.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <CtaLink to="/contact">See What ZenOps Could Find in Your Azure Environment</CtaLink>
+              <CtaLink to="/contact">See What ZenAI-Ops Could Find in Your Azure Environment</CtaLink>
               <CtaLink to="/zenops" variant="onDark">
-                Book a ZenOps Demo
+                Book a ZenAI-Ops Demo
               </CtaLink>
             </div>
           </Reveal>

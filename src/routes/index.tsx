@@ -35,9 +35,9 @@ import {
   StatCard,
 } from "@/components/site/primitives";
 
-const TITLE = "ZenOps by ZensusTech — Intelligent Azure Operations, Security & Cost Platform";
+const TITLE = "ZenAI-Ops by ZensusTech — Intelligent Azure Operations, Security & Cost Platform";
 const DESCRIPTION =
-  "ZenOps gives growing businesses continuous visibility across Azure security, operations, compliance and cost — without a large CloudOps or SecOps team.";
+  "ZenAI-Ops gives growing businesses continuous visibility across Azure security, operations, compliance and cost — without a large CloudOps or SecOps team.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -145,7 +145,7 @@ const EVIDENCE_INPUTS = [
 ];
 
 const LIFECYCLE = [
-  { title: "Discover", copy: "ZenOps identifies risk and opportunity across your Azure environment." },
+  { title: "Discover", copy: "ZenAI-Ops identifies risk and opportunity across your Azure environment." },
   { title: "Assess", copy: "ZensusTech experts validate the environment and prioritise what matters." },
   { title: "Remediate", copy: "Security, architecture, infrastructure and configuration improvements." },
   { title: "Modernize", copy: "Migration, modernization, DevOps and automation." },
@@ -179,13 +179,13 @@ function Home() {
               Your cloud grows faster than your ability to monitor, secure and optimize it.
             </p>
             <p className="mt-4 max-w-xl text-base font-semibold leading-relaxed text-navy-foreground sm:text-lg">
-              ZenOps gives growing businesses continuous visibility across Azure security, operations,
+              ZenAI-Ops gives growing businesses continuous visibility across Azure security, operations,
               compliance and cost—without requiring a large CloudOps or SecOps team.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
               <CtaLink to="/contact">Book Your Demo Today</CtaLink>
               <CtaLink to="/zenops" variant="onDark">
-                Explore ZenOps
+                Explore ZenAI-Ops
               </CtaLink>
             </div>
             <p className="mt-7 inline-flex items-center gap-2 text-sm font-bold text-navy-foreground/60">
@@ -234,12 +234,12 @@ function Home() {
         </Reveal>
       </Section>
 
-      {/* SECTION 3 — ZENOPS VALUE */}
+      {/* SECTION 3 — ZenAI-Ops VALUE */}
       <Section tone="white">
         <SectionHead
-          eyebrow="The ZenOps layer"
+          eyebrow="The ZenAI-Ops layer"
           title="One Intelligent Layer Across Your Azure Environment"
-          copy="ZenOps brings scattered Azure signals into a single operational picture and turns them into four business outcomes."
+          copy="ZenAI-Ops brings scattered Azure signals into a single operational picture and turns them into four business outcomes."
         />
         <Reveal className="mt-14">
           <ArchitectureFlow />
@@ -258,10 +258,10 @@ function Home() {
         </div>
       </Section>
 
-      {/* SECTION 5 — WHY ZENOPS */}
+      {/* SECTION 5 — WHY ZenAI-Ops */}
       <Section tone="white">
         <SectionHead
-          eyebrow="Why ZenOps"
+          eyebrow="Why ZenAI-Ops"
           title="You Don't Need More Cloud Tools. You Need Better Cloud Intelligence."
         />
         <div className="mt-14 grid items-center gap-6 lg:grid-cols-[1fr_auto_1fr]">
@@ -304,7 +304,7 @@ function Home() {
           </Reveal>
           <Reveal delay={160}>
             <div className="rounded-3xl border border-primary/30 surface-navy p-8 shadow-glow">
-              <p className="eyebrow text-azure-bright">ZenOps</p>
+              <p className="eyebrow text-azure-bright">ZenAI-Ops</p>
               <p className="mt-4 text-2xl font-extrabold text-navy-foreground">
                 One operational intelligence layer
               </p>
@@ -345,7 +345,7 @@ function Home() {
                   {a.problem}
                 </p>
                 <p className="mt-3 rounded-2xl border border-primary/20 bg-accent/60 p-4 text-sm font-semibold text-accent-foreground">
-                  <span className="eyebrow block text-primary">ZenOps outcome</span>
+                  <span className="eyebrow block text-primary">ZenAI-Ops outcome</span>
                   <span className="mt-1.5 block">{a.outcome}</span>
                 </p>
               </article>
@@ -364,7 +364,7 @@ function Home() {
               Don't Just Enable Security. Be Ready to Prove It.
             </h2>
             <p className="mt-6 text-base leading-relaxed text-navy-foreground/70 sm:text-lg">
-              Security controls matter. Evidence matters too. ZenOps is designed to bring configuration, policy
+              Security controls matter. Evidence matters too. ZenAI-Ops is designed to bring configuration, policy
               and protection signals together so security posture can be explained, not just enabled.
             </p>
             <CtaLink to="/contact" className="mt-8">
@@ -408,7 +408,7 @@ function Home() {
       <Section tone="white">
         <SectionHead
           eyebrow="Product plus expertise"
-          title="When ZenOps Finds the Problem, ZensusTech Can Fix It."
+          title="When ZenAI-Ops Finds the Problem, ZensusTech Can Fix It."
           copy="Intelligence is only useful if someone can act on it. ZensusTech delivery teams turn findings into remediation, modernization and ongoing operations."
         />
         <div className="mt-14">
@@ -464,7 +464,7 @@ function Home() {
         title="Know Your Azure Risk Before It Becomes Your Business Problem."
         copy="Start with a structured look at your environment — then decide what to fix first."
         primary={{ label: "Check My Azure Environment", to: "/contact" }}
-        secondary={{ label: "Book a ZenOps Demo", to: "/zenops" }}
+        secondary={{ label: "Book a ZenAI-Ops Demo", to: "/zenops" }}
       />
 
     </>
