@@ -49,8 +49,8 @@ const SOLUTIONS = [
   {
     icon: Gauge,
     eyebrow: "Solution 02",
-    title: "Managed Cloud Services",
-    copy: "24×7 monitoring, management, security and optimization so your team can focus on business priorities.",
+    title: "Cloud Managed Services",
+    copy: "24×7 cloud monitoring, management, security, FinOps and optimization; keeping your cloud secure, reliable, and cost-efficient while your team focuses on business priorities.",
     capabilities: [
       "24×7 monitoring",
       "Incident response",
@@ -61,7 +61,7 @@ const SOLUTIONS = [
       "Cost governance",
       "Health reporting",
     ],
-    cta: "Talk to a Cloud Expert",
+    cta: "Talk to a Cloud Expert |  Get Your Cloud Assessment",
   },
   {
     icon: ShieldCheck,
