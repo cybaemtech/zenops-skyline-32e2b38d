@@ -12,7 +12,7 @@ import {
 import heroPoster from "@/assets/solutions-hero-poster.webp";
 
 
-const TITLE = "Solutions — Azure Migration, Managed Cloud, Security, DevOps & FinOps | ZensusTech";
+const TITLE = "Solutions — Cloud Migration, Managed Cloud, Security, DevOps & FinOps | ZensusTech";
 const DESCRIPTION =
   "Use ZenAI-Ops to understand your cloud environment and ZensusTech expertise to transform it: migration, managed cloud services, security and compliance, DevOps, cost optimization and Microsoft 365.";
 
@@ -35,7 +35,7 @@ const SOLUTIONS = [
     icon: Network,
     eyebrow: "Solution 01",
     title: "Cloud Migration & Modernization",
-    copy: "Move legacy workloads to Azure, AWS or GCP with structured planning, migration and post-migration validation.",
+    copy: "Move legacy workloads to Cloud, AWS or GCP with structured planning, migration and post-migration validation.",
     capabilities: [
       "Cloud readiness",
       "Migration strategy",
@@ -77,7 +77,7 @@ const SOLUTIONS = [
       "Key management",
       "Evidence readiness",
     ],
-    cta: "Request Azure Audit Evidence Report",
+    cta: "Request Cloud Audit Evidence Report",
   },
   {
     icon: DatabaseZap,
@@ -202,19 +202,19 @@ function SolutionsPage() {
         <SectionHead
           eyebrow="Platforms"
           title="ZenAI-Ops Is Azure-Focused. ZensusTech Services Are Multi-Cloud."
-          copy="The product goes deep on Azure. Our delivery teams work across the major cloud platforms."
+          copy="The product goes deep on Cloud. Our delivery teams work across the major cloud platforms."
         />
         <div className="mt-14 grid gap-5 md:grid-cols-3">
           <Reveal>
             <CloudPlatformCard
               featured
-              name="Microsoft Azure"
+              name="Microsoft Cloud"
               role="ZenAI-Ops + services"
               points={[
                 "ZenAI-Ops intelligence layer",
                 "Security, identity and governance visibility",
                 "Cost and operational optimization",
-                "Managed Azure operations",
+                "Managed Cloud operations",
               ]}
             />
           </Reveal>

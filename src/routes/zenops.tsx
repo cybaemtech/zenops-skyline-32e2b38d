@@ -23,9 +23,9 @@ import {
   SectionHead,
 } from "@/components/site/primitives";
 
-const TITLE = "ZenAI-Ops — Intelligent Azure Operations, Security, Compliance & Cost Platform";
+const TITLE = "ZenAI-Ops — Intelligent Cloud Operations, Security, Compliance & Cost Platform";
 const DESCRIPTION =
-  "ZenAI-Ops unifies Azure security, identity, cost, compliance and operational signals into one intelligence layer: see, understand, act and prove.";
+  "ZenAI-Ops unifies Cloud security, identity, cost, compliance and operational signals into one intelligence layer: see, understand, act and prove.";
 
 export const Route = createFileRoute("/zenops")({
   head: () => ({
@@ -57,14 +57,14 @@ export const Route = createFileRoute("/zenops")({
 });
 
 const PILLARS = [
-  { icon: Eye, tag: "See", title: "Unified Azure visibility", copy: "Bring subscriptions, resources, identities and configuration into a single operational picture." },
+  { icon: Eye, tag: "See", title: "Unified Cloud visibility", copy: "Bring subscriptions, resources, identities and configuration into a single operational picture." },
   { icon: Lightbulb, tag: "Understand", title: "Contextual intelligence and prioritization", copy: "Separate noise from the issues that actually carry security, cost or reliability weight." },
   { icon: Wrench, tag: "Act", title: "Action-oriented response", copy: "Turn findings into a prioritised remediation and operational response plan." },
   { icon: FileCheck2, tag: "Prove", title: "Governance and audit evidence", copy: "Support governance, compliance narratives and evidence readiness with less manual effort." },
 ];
 
 const CAPABILITIES = [
-  { icon: Gauge, title: "Azure Visibility", copy: "Subscriptions, resources, configuration and environment structure in one view." },
+  { icon: Gauge, title: "Cloud Visibility", copy: "Subscriptions, resources, configuration and environment structure in one view." },
   { icon: ShieldCheck, title: "Security Intelligence", copy: "Posture weaknesses, exposure and risky configuration surfaced continuously." },
   { icon: Fingerprint, title: "Identity & Access Intelligence", copy: "Privileged access, unusual sign-in behaviour and identity sprawl signals." },
   { icon: Coins, title: "Cost Intelligence", copy: "Waste, idle capacity and optimization opportunities across the estate." },
@@ -74,7 +74,7 @@ const CAPABILITIES = [
 
 const PERSONAS = [
   { role: "For CTOs", promise: "Know whether your cloud environment is becoming a business risk." },
-  { role: "For IT Heads", promise: "Manage more Azure complexity without continuously adding people." },
+  { role: "For IT Heads", promise: "Manage more Cloud complexity without continuously adding people." },
   { role: "For Security Leaders", promise: "Identify risks and improve compliance visibility." },
   { role: "For DevOps Teams", promise: "Move from reactive monitoring to proactive operations." },
 ];
@@ -86,18 +86,18 @@ function ZenOpsPage() {
         <div className="pointer-events-none absolute inset-0 grid-backdrop opacity-15 animate-grid-drift" aria-hidden="true" />
         <div className="relative mx-auto w-full max-w-4xl px-5 py-20 text-center sm:px-8 md:py-28">
           <Reveal>
-            <p className="eyebrow text-azure-bright">ZenAI-Ops — Intelligent Azure Operations</p>
+            <p className="eyebrow text-azure-bright">ZenAI-Ops — Intelligent Cloud Operations</p>
             <h1 className="mt-5 text-4xl font-extrabold leading-[1.05] text-navy-foreground sm:text-5xl lg:text-6xl">
-              One Intelligence Layer for Your Entire Azure Environment.
+              One Intelligence Layer for Your Entire Cloud Environment.
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-navy-foreground/70 sm:text-lg">
-              ZenAI-Ops continuously brings together the signals that matter across Azure security, operations,
+              ZenAI-Ops continuously brings together the signals that matter across Cloud security, operations,
               governance and cost—so your team can see what matters, understand why it matters and act faster.
             </p>
             <div className="mt-9 flex flex-wrap justify-center gap-3">
               <CtaLink to="/contact">Book a ZenAI-Ops Demo</CtaLink>
               <CtaLink to="/contact" variant="onDark">
-                Request Azure Health Check
+                Request Cloud Health Check
               </CtaLink>
             </div>
           </Reveal>
@@ -107,7 +107,7 @@ function ZenOpsPage() {
       <Section tone="light">
         <SectionHead
           eyebrow="Product visualization"
-          title="A Command Center for Your Azure Estate"
+          title="A Command Center for Your Cloud Estate"
           copy="A conceptual view of how ZenAI-Ops presents health, risk, cost and compliance signals side by side."
         />
         <Reveal className="mt-14">
@@ -137,7 +137,7 @@ function ZenOpsPage() {
         <SectionHead
           eyebrow="Capability matrix"
           title="Six Capabilities, One Operational Picture"
-          copy="Capabilities describe how ZenAI-Ops is positioned to support your Azure environment."
+          copy="Capabilities describe how ZenAI-Ops is positioned to support your Cloud environment."
         />
         <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {CAPABILITIES.map((c, i) => (
@@ -177,9 +177,9 @@ function ZenOpsPage() {
 
       <CtaBand
         eyebrow="Assessment"
-        title="What Would ZenAI-Ops Find in Your Azure Environment?"
+        title="What Would ZenAI-Ops Find in Your Cloud Environment?"
         copy="We'll walk your environment with you and show where the risk, waste and gaps are concentrated."
-        primary={{ label: "Book My Azure Assessment", to: "/contact" }}
+        primary={{ label: "Book My Cloud Assessment", to: "/contact" }}
         secondary={{ label: "Talk to a Cloud Expert", to: "/solutions" }}
       />
     </>

@@ -25,7 +25,7 @@ export function ProductDashboard() {
 
       <div className="relative flex flex-wrap items-end justify-between gap-4">
         <div>
-          <p className="eyebrow text-azure-bright">Overall Azure health</p>
+          <p className="eyebrow text-azure-bright">Overall Cloud health</p>
           <p className="mt-2 text-5xl font-black text-navy-foreground">
             92 <span className="text-xl font-bold text-navy-foreground/50">/ 100</span>
           </p>

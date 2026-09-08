@@ -4,9 +4,9 @@ import { ContactForm } from "@/components/site/ContactForm";
 import { Reveal } from "@/components/site/Reveal";
 import { CtaBand, Section } from "@/components/site/primitives";
 
-const TITLE = "Book an Azure Assessment — ZenAI-Ops & ZensusTech Cloud Experts";
+const TITLE = "Book an Cloud Assessment — ZenAI-Ops & ZensusTech Cloud Experts";
 const DESCRIPTION =
-  "Tell us about your Azure environment and challenges across security, compliance, cost and operations. We'll help identify the right next step.";
+  "Tell us about your Cloud environment and challenges across security, compliance, cost and operations. We'll help identify the right next step.";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -38,10 +38,10 @@ function ContactPage() {
           <Reveal>
             <p className="eyebrow text-azure-bright">Book assessment</p>
             <h1 className="mt-5 text-4xl font-extrabold leading-[1.05] text-navy-foreground sm:text-5xl">
-              Let's Find Out What Your Azure Environment Is Hiding.
+              Let's Find Out What Your Cloud Environment Is Hiding.
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-navy-foreground/70 sm:text-lg">
-              Tell us about your Azure environment and the business challenges you're facing. We'll help identify
+              Tell us about your Cloud environment and the business challenges you're facing. We'll help identify
               the right next step.
             </p>
           </Reveal>
@@ -74,7 +74,7 @@ function ContactPage() {
                 <p className="text-sm font-bold text-accent-foreground">What happens next</p>
                 <ol className="mt-3 space-y-2 text-sm text-accent-foreground/85">
                   <li>1. We review your environment details.</li>
-                  <li>2. We scope a focused Azure assessment.</li>
+                  <li>2. We scope a focused Cloud assessment.</li>
                   <li>3. You get a prioritised view of risk, cost and gaps.</li>
                 </ol>
               </div>
@@ -84,8 +84,8 @@ function ContactPage() {
       </Section>
 
       <CtaBand
-        title="Your Azure Environment Shouldn't Be a Black Box."
-        primary={{ label: "Book My Azure Assessment", to: "/contact" }}
+        title="Your Cloud Environment Shouldn't Be a Black Box."
+        primary={{ label: "Book My Cloud Assessment", to: "/contact" }}
         secondary={{ label: "Talk to a ZenAI-Ops Expert", to: "/zenops" }}
       />
     </>

@@ -35,9 +35,9 @@ import {
   StatCard,
 } from "@/components/site/primitives";
 
-const TITLE = "ZenAI-Ops by ZensusTech — Intelligent Azure Operations, Security & Cost Platform";
+const TITLE = "ZenAI-Ops by ZensusTech — Intelligent Cloud Operations, Security & Cost Platform";
 const DESCRIPTION =
-  "ZenAI-Ops gives growing businesses continuous visibility across Azure security, operations, compliance and cost — without a large CloudOps or SecOps team.";
+  "ZenAI-Ops gives growing businesses continuous visibility across Cloud security, operations, compliance and cost — without a large CloudOps or SecOps team.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -88,8 +88,8 @@ const OUTCOMES = [
     index: "02",
     icon: Coins,
     tag: "Optimize",
-    title: "Improve your Azure economics",
-    copy: "Discover cloud waste and continuously improve Azure economics.",
+    title: "Improve your Cloud economics",
+    copy: "Discover cloud waste and continuously improve Cloud economics.",
   },
   {
     index: "03",
@@ -110,15 +110,15 @@ const OUTCOMES = [
 const AUDIENCES = [
   {
     icon: Cpu,
-    title: "Azure SaaS & Technology",
-    problem: "Rapid Azure growth and frequent deployments outpace security and operational review.",
-    outcome: "Continuous security, cost and operational visibility across a fast-moving Azure estate.",
+    title: "Cloud SaaS & Technology",
+    problem: "Rapid Cloud growth and frequent deployments outpace security and operational review.",
+    outcome: "Continuous security, cost and operational visibility across a fast-moving Cloud estate.",
   },
   {
     icon: Users,
     title: "Growing Mid-Market IT Teams",
-    problem: "A meaningful Azure environment run by a lean IT team with no dedicated CloudOps function.",
-    outcome: "One intelligence layer that lets a small team cover far more Azure surface area.",
+    problem: "A meaningful Cloud environment run by a lean IT team with no dedicated CloudOps function.",
+    outcome: "One intelligence layer that lets a small team cover far more Cloud surface area.",
   },
   {
     icon: FileCheck2,
@@ -129,13 +129,13 @@ const AUDIENCES = [
   {
     icon: Building2,
     title: "MSPs & Cloud Service Providers",
-    problem: "Multiple customer Azure estates reviewed manually, tenant by tenant.",
+    problem: "Multiple customer Cloud estates reviewed manually, tenant by tenant.",
     outcome: "Consistent posture, cost and operational signals across the estates you manage.",
   },
 ];
 
 const EVIDENCE_INPUTS = [
-  "Azure configuration",
+  "Cloud configuration",
   "Policy compliance",
   "Resource Graph",
   "Defender for Cloud",
@@ -145,7 +145,7 @@ const EVIDENCE_INPUTS = [
 ];
 
 const LIFECYCLE = [
-  { title: "Discover", copy: "ZenAI-Ops identifies risk and opportunity across your Azure environment." },
+  { title: "Discover", copy: "ZenAI-Ops identifies risk and opportunity across your Cloud environment." },
   { title: "Assess", copy: "ZensusTech experts validate the environment and prioritise what matters." },
   { title: "Remediate", copy: "Security, architecture, infrastructure and configuration improvements." },
   { title: "Modernize", copy: "Migration, modernization, DevOps and automation." },
@@ -153,7 +153,7 @@ const LIFECYCLE = [
 ];
 
 const SERVICES = [
-  { icon: Network, title: "Cloud Migration", copy: "Structured moves to Azure, AWS or GCP." },
+  { icon: Network, title: "Cloud Migration", copy: "Structured moves to Cloud, AWS or GCP." },
   { icon: Workflow, title: "Application Modernization", copy: "Re-architect applications for the cloud." },
   { icon: Gauge, title: "Managed Cloud Services", copy: "24×7 monitoring, management and optimization." },
   { icon: ShieldCheck, title: "Cloud Security & Compliance", copy: "Assessment, audit and data protection." },
@@ -171,15 +171,15 @@ function Home() {
         <div className="pointer-events-none absolute inset-0 grid-backdrop opacity-15 animate-grid-drift" aria-hidden="true" />
         <div className="relative mx-auto grid w-full max-w-7xl items-center gap-14 px-5 py-20 sm:px-8 md:py-28 lg:grid-cols-[1.05fr_1fr]">
           <Reveal>
-            <p className="eyebrow text-azure-bright">Intelligent Azure Operations</p>
+            <p className="eyebrow text-azure-bright">Intelligent Cloud Operations</p>
             <h1 className="mt-5 text-4xl font-extrabold leading-[1.05] text-navy-foreground sm:text-5xl lg:text-6xl">
-              Is Your Azure Environment Really Under Control?
+              Is Your Cloud Environment Really Under Control?
             </h1>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-navy-foreground/70 sm:text-lg">
               Your cloud grows faster than your ability to monitor, secure and optimize it.
             </p>
             <p className="mt-4 max-w-xl text-base font-semibold leading-relaxed text-navy-foreground sm:text-lg">
-              ZenAI-Ops gives growing businesses continuous visibility across Azure security, operations,
+              ZenAI-Ops gives growing businesses continuous visibility across Cloud security, operations,
               compliance and cost—without requiring a large CloudOps or SecOps team.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
@@ -203,7 +203,7 @@ function Home() {
       <Section tone="light">
         <SectionHead
           eyebrow="The problem"
-          title="Your Azure Environment Is Becoming a Business Risk."
+          title="Your Cloud Environment Is Becoming a Business Risk."
           copy="As the estate grows, the gap between what is running and what your team can actually see keeps widening."
         />
         <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -217,7 +217,7 @@ function Home() {
         <Reveal className="mt-12">
           <div className="grid items-center gap-4 rounded-3xl border border-border bg-card p-8 shadow-soft md:grid-cols-[1fr_auto_1fr_auto_1fr]">
             <div className="rounded-2xl bg-secondary/70 p-5 text-center">
-              <p className="text-sm font-extrabold">Complex Azure Environment</p>
+              <p className="text-sm font-extrabold">Complex Cloud Environment</p>
               <p className="mt-1 text-xs text-muted-foreground">Subscriptions, identities, workloads, policies</p>
             </div>
             <ArrowDown className="mx-auto size-5 rotate-0 text-primary md:-rotate-90" aria-hidden="true" />
@@ -238,8 +238,8 @@ function Home() {
       <Section tone="white">
         <SectionHead
           eyebrow="The ZenAI-Ops layer"
-          title="One Intelligent Layer Across Your Azure Environment"
-          copy="ZenAI-Ops brings scattered Azure signals into a single operational picture and turns them into four business outcomes."
+          title="One Intelligent Layer Across Your Cloud Environment"
+          copy="ZenAI-Ops brings scattered Cloud signals into a single operational picture and turns them into four business outcomes."
         />
         <Reveal className="mt-14">
           <ArchitectureFlow />
@@ -329,7 +329,7 @@ function Home() {
 
       {/* SECTION 6 — TARGET CUSTOMER */}
       <Section tone="light">
-        <SectionHead eyebrow="Who it's for" title="Built for Businesses Running on Azure." />
+        <SectionHead eyebrow="Who it's for" title="Built for Businesses Running on Cloud." />
         <div className="mt-14 grid gap-5 sm:grid-cols-2">
           {AUDIENCES.map((a, i) => (
             <Reveal key={a.title} delay={i * 70}>
@@ -359,7 +359,7 @@ function Home() {
         <div className="pointer-events-none absolute inset-0 grid-backdrop opacity-10 animate-grid-drift" aria-hidden="true" />
         <div className="relative grid items-center gap-12 lg:grid-cols-2">
           <Reveal>
-            <p className="eyebrow text-azure-bright">Azure security & audit</p>
+            <p className="eyebrow text-azure-bright">Cloud security & audit</p>
             <h2 className="mt-5 text-3xl font-extrabold text-navy-foreground sm:text-4xl md:text-5xl">
               Don't Just Enable Security. Be Ready to Prove It.
             </h2>
@@ -368,7 +368,7 @@ function Home() {
               and protection signals together so security posture can be explained, not just enabled.
             </p>
             <CtaLink to="/contact" className="mt-8">
-              Request a Sample Azure Audit Report
+              Request a Sample Cloud Audit Report
             </CtaLink>
           </Reveal>
           <Reveal delay={120}>
@@ -461,9 +461,9 @@ function Home() {
       {/* SECTION 10 — FINAL CTA */}
       <CtaBand
         eyebrow="Next step"
-        title="Know Your Azure Risk Before It Becomes Your Business Problem."
+        title="Know Your Cloud Risk Before It Becomes Your Business Problem."
         copy="Start with a structured look at your environment — then decide what to fix first."
-        primary={{ label: "Check My Azure Environment", to: "/contact" }}
+        primary={{ label: "Check My Cloud Environment", to: "/contact" }}
         secondary={{ label: "Book a ZenAI-Ops Demo", to: "/zenops" }}
       />
 

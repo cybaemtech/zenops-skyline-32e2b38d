@@ -63,7 +63,7 @@ export function IndustryVoices() {
             Industry voices
           </span>
           <h2 className="mx-auto mt-6 max-w-3xl text-3xl font-extrabold uppercase leading-[1.05] sm:text-4xl lg:text-5xl">
-            Empowering Azure Teams Across Every Industry
+            Empowering Cloud Teams Across Every Industry
           </h2>
           <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-muted-foreground">
             The same platform serves SaaS engineers, retail operators, plant supervisors and finance leaders — each

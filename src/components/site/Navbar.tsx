@@ -67,7 +67,7 @@ export function Navbar() {
             to="/contact"
             className="inline-flex items-center rounded-xl bg-primary px-5 py-3 text-sm font-bold text-primary-foreground shadow-glow transition-all hover:-translate-y-0.5 hover:brightness-110"
           >
-            Check My Azure Environment
+            Check My Cloud Environment
           </Link>
         </div>
 
@@ -102,7 +102,7 @@ export function Navbar() {
             onClick={() => setOpen(false)}
             className="mt-4 flex items-center justify-center rounded-xl bg-primary px-5 py-3.5 text-sm font-bold text-primary-foreground"
           >
-            Check My Azure Environment
+            Check My Cloud Environment
           </Link>
         </div>
       ) : null}

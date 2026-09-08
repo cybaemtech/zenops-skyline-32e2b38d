@@ -13,7 +13,7 @@ const SIGNALS: { label: string; icon: LucideIcon }[] = [
 const OUTPUTS = ["Secure", "Optimize", "Govern", "Operate"];
 
 /**
- * Signature brand visual: Azure signals converging into the ZenAI-Ops
+ * Signature brand visual: Cloud signals converging into the ZenAI-Ops
  * intelligence layer, then resolving into four business outcomes.
  * Conceptual illustration — not live customer data.
  */
@@ -23,7 +23,7 @@ export function ZenOpsDiagram() {
       <div className="pointer-events-none absolute inset-0 grid-backdrop rounded-3xl opacity-20 animate-grid-drift" aria-hidden="true" />
 
       <div className="relative flex items-center justify-between gap-3">
-        <p className="eyebrow text-azure-bright">Azure environment signals</p>
+        <p className="eyebrow text-azure-bright">Cloud environment signals</p>
         <span className="inline-flex items-center gap-2 rounded-full border border-navy-foreground/15 px-3 py-1 text-[0.65rem] font-bold uppercase tracking-widest text-navy-foreground/70">
           <span className="size-1.5 rounded-full bg-ok animate-pulse-node" aria-hidden="true" />
           Continuous
@@ -47,7 +47,7 @@ export function ZenOpsDiagram() {
         viewBox="0 0 400 70"
         className="relative mt-4 h-16 w-full"
         role="img"
-        aria-label="Azure signals converging into the ZenAI-Ops intelligence layer"
+        aria-label="Cloud signals converging into the ZenAI-Ops intelligence layer"
       >
         {[40, 120, 200, 280, 360].map((x) => (
           <path
@@ -67,7 +67,7 @@ export function ZenOpsDiagram() {
         <p className="mt-1 text-xs font-bold uppercase tracking-[0.2em] text-azure-bright">
           Secure • Optimize • Govern • Operate
         </p>
-        <p className="mt-3 text-xs text-navy-foreground/60">Intelligence layer across your Azure estate</p>
+        <p className="mt-3 text-xs text-navy-foreground/60">Intelligence layer across your Cloud estate</p>
       </div>
 
       <div className="relative mt-5 grid grid-cols-2 gap-2.5 sm:grid-cols-4">
@@ -89,7 +89,7 @@ export function ArchitectureFlow() {
   const azureLayer = ["Subscriptions", "VMs", "Storage", "SQL", "Identity", "Networking", "Applications"];
   return (
     <div className="rounded-3xl border border-border bg-card p-6 shadow-soft sm:p-10">
-      <p className="eyebrow text-muted-foreground">Azure layer</p>
+      <p className="eyebrow text-muted-foreground">Cloud layer</p>
       <ul className="mt-4 flex flex-wrap gap-2.5">
         {azureLayer.map((item) => (
           <li
