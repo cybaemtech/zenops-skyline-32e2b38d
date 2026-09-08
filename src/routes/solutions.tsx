@@ -83,7 +83,7 @@ const SOLUTIONS = [
     icon: DatabaseZap,
     eyebrow: "Solution 04",
     title: "DevOps & Automation",
-    copy: "Ship faster with automated pipelines, reproducible infrastructure and consistent release practices.",
+    copy: "Accelerate delivery through automated CI/CD, reproducible infrastructure, and standardized release practices—reducing deployment risk and operational effort.",
     capabilities: [
       "CI/CD",
       "Infrastructure as Code",
@@ -98,7 +98,7 @@ const SOLUTIONS = [
     icon: Coins,
     eyebrow: "Solution 05",
     title: "Cost Optimization / FinOps",
-    copy: "Bring cloud spending under control with continuous analysis, right-sizing and clear savings reporting.",
+    copy: "Stay ahead of cloud costs with continuous analysis, proactive optimization, right-sizing, and predictive insights to prevent unexpected spend.",
     capabilities: ["Cost analysis", "Resource optimization", "Budget management", "Savings reporting"],
     cta: "Book Your Demo Today",
   },
