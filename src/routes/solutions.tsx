@@ -244,7 +244,7 @@ function SolutionsPage() {
       <Section tone="white">
         <SectionHead
           eyebrow="Platforms"
-          title="ZenAI-Ops Is Cloud-Focused. ZensusTech Services Are Multi-Cloud."
+          title="ZenAiOps™ Is Azure Focused. ZensusTech Services Are Multi-Cloud."
           copy={
             <>
               <span>Built with Azure depth. Designed for the multi-cloud enterprise.</span>
@@ -259,7 +259,7 @@ function SolutionsPage() {
             <CloudPlatformCard
               featured
               name="Microsoft Azure"
-              role="ZenAI-Ops + services"
+              role="ZENAIOPS™ + SERVICES"
               points={[
                 "ZenAiOps™ + Services & ZenAiOps™ Intelligence Layer",
                 "Security, identity and governance visibility",
