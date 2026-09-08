@@ -67,7 +67,7 @@ const SOLUTIONS = [
     icon: ShieldCheck,
     eyebrow: "Solution 03",
     title: "Cloud Security & Compliance",
-    copy: "Security that goes beyond configuration — assessment, detection and data protection, with evidence readiness in mind.",
+    copy: "Security that goes beyond configuration with continuous assessment, threat detection, data protection, and built-in evidence readiness.",
     capabilities: [
       "Security assessment",
       "Compliance audit",
