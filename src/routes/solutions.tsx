@@ -202,7 +202,7 @@ function SolutionsPage() {
         <SectionHead
           eyebrow="Platforms"
           title="ZenAI-Ops Is Cloud-Focused. ZensusTech Services Are Multi-Cloud."
-          copy="The product goes deep on Cloud. Our delivery teams work across the major cloud platforms."
+          copy={"Built with Azure depth. Designed for the multi-cloud enterprise.\n\nZenAiOps™ is purpose-built for cloud operations, delivering deep visibility, automation, security, FinOps, and optimization across cloud environments. ZensusTech extends these capabilities across major cloud platforms, helping organizations securely manage, optimize, and transform their multi-cloud operations."}
         />
         <div className="mt-14 grid gap-5 md:grid-cols-3">
           <Reveal>
