@@ -23,7 +23,7 @@ export function Footer() {
           <ul className="mt-4 space-y-2 text-sm text-navy-foreground/75">
             <li>
               <Link to="/zenops" className="inline-block py-1.5 hover:text-azure-bright">
-                Intelligent Azure Operations
+                Intelligent Cloud Operations
               </Link>
             </li>
           </ul>

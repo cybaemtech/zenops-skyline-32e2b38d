@@ -9,9 +9,9 @@ import { cn } from "@/lib/utils";
 import splitImg from "@/assets/industries-split.webp";
 import splitImgSmall from "@/assets/industries-split-800.webp";
 
-const TITLE = "Industries & Azure Use Cases — SaaS, Retail, Manufacturing, Finance | ZenAI-Ops";
+const TITLE = "Industries & Cloud Use Cases — SaaS, Retail, Manufacturing, Finance | ZenAI-Ops";
 const DESCRIPTION =
-  "See how ZenAI-Ops and ZensusTech address real Azure problems by industry: cost, security, compliance readiness, identity risk and operational visibility.";
+  "See how ZenAI-Ops and ZensusTech address real Cloud problems by industry: cost, security, compliance readiness, identity risk and operational visibility.";
 
 export const Route = createFileRoute("/industries")({
   head: () => ({
@@ -33,7 +33,7 @@ const INDUSTRIES = [
   {
     icon: Cpu,
     title: "SaaS & Technology",
-    problem: "Rapid Azure growth, complex environments, frequent deployments and security requirements.",
+    problem: "Rapid Cloud growth, complex environments, frequent deployments and security requirements.",
     zenops: ["Security", "Operational visibility", "Cost intelligence", "Governance"],
     zensustech: ["DevOps", "Cloud modernization", "Managed operations"],
   },
@@ -76,7 +76,7 @@ const INDUSTRIES = [
 
 const USE_CASES = [
   {
-    q: "Is Azure spending too much?",
+    q: "Is Cloud spending too much?",
     a: "ZenAI-Ops highlights idle resources, overprovisioned infrastructure and spend patterns that drift over time. ZensusTech cost optimization then handles right-sizing, budget governance and savings reporting.",
   },
   {
@@ -93,7 +93,7 @@ const USE_CASES = [
   },
   {
     q: "Do we have cloud blind spots?",
-    a: "Unified Azure visibility maps subscriptions, resources and configuration so untracked or forgotten workloads stop hiding between environments.",
+    a: "Unified Cloud visibility maps subscriptions, resources and configuration so untracked or forgotten workloads stop hiding between environments.",
   },
   {
     q: "Are operational issues being detected early?",
@@ -101,7 +101,7 @@ const USE_CASES = [
   },
   {
     q: "Do we need more CloudOps capacity?",
-    a: "If your team is stretched, ZenAI-Ops extends how much Azure surface a small team can cover, and ZensusTech managed cloud services add capacity without hiring a specialist function.",
+    a: "If your team is stretched, ZenAI-Ops extends how much Cloud surface a small team can cover, and ZensusTech managed cloud services add capacity without hiring a specialist function.",
   },
 ];
 
@@ -116,7 +116,7 @@ function IndustriesPage() {
           src={splitImg}
           srcSet={`${splitImgSmall} 800w, ${splitImg} 1600w`}
           sizes="100vw"
-          alt="Azure cloud operations network with connected nodes and data flows"
+          alt="Cloud cloud operations network with connected nodes and data flows"
           width={1600}
           height={1600}
           loading="eager"
@@ -208,7 +208,7 @@ function IndustriesPage() {
 
       <CtaBand
         eyebrow="Next step"
-        title="Get My Azure Health Check"
+        title="Get My Cloud Health Check"
         copy="Tell us which question matters most and we'll start there."
         primary={{ label: "Book Your Demo Today", to: "/contact" }}
         secondary={{ label: "Book a ZenAI-Ops Demo", to: "/zenops" }}

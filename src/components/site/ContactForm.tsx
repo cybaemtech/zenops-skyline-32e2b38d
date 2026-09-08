@@ -2,8 +2,8 @@ import { useState } from "react";
 import { CheckCircle2 } from "lucide-react";
 
 const COMPANY_SIZES = ["1–20", "21–50", "51–100", "101–250", "251–500", "500+"];
-const CLOUDS = ["Microsoft Azure", "AWS", "Google Cloud", "Hybrid / Multi-cloud", "On-premises", "Not sure"];
-const AZURE_SIZE = [
+const CLOUDS = ["Microsoft Cloud", "AWS", "Google Cloud", "Hybrid / Multi-cloud", "On-premises", "Not sure"];
+const CLOUD_SIZE = [
   "1 subscription",
   "2–5 subscriptions",
   "6–15 subscriptions",
@@ -14,7 +14,7 @@ const CHALLENGES = [
   "Security",
   "Compliance",
   "Cloud Costs",
-  "Azure Operations",
+  "Cloud Operations",
   "Identity / Access",
   "Infrastructure Visibility",
   "Migration",
@@ -42,7 +42,7 @@ export function ContactForm() {
           <a href="mailto:info@zensustech.com" className="font-bold text-primary">
             info@zensustech.com
           </a>{" "}
-          or call +91 9823 10 11 12 and our team will scope your Azure assessment.
+          or call +91 9823 10 11 12 and our team will scope your Cloud assessment.
         </p>
       </div>
     );
@@ -120,12 +120,12 @@ export function ContactForm() {
           </select>
         </div>
         <div>
-          <label className={labelClass} htmlFor="azureSize">
-            Azure Environment Size
+          <label className={labelClass} htmlFor="cloudSize">
+            Cloud Environment Size
           </label>
-          <select id="azureSize" name="azureSize" className={fieldClass} defaultValue="">
+          <select id="cloudSize" name="cloudSize" className={fieldClass} defaultValue="">
             <option value="">Select</option>
-            {AZURE_SIZE.map((o) => (
+            {CLOUD_SIZE.map((o) => (
               <option key={o}>{o}</option>
             ))}
           </select>
@@ -150,7 +150,7 @@ export function ContactForm() {
             name="message"
             rows={4}
             className={fieldClass}
-            placeholder="Tell us what you're trying to solve in your Azure environment"
+            placeholder="Tell us what you're trying to solve in your Cloud environment"
           />
         </div>
       </div>
@@ -159,7 +159,7 @@ export function ContactForm() {
         type="submit"
         className="mt-7 w-full rounded-xl bg-primary px-6 py-4 text-sm font-bold text-primary-foreground shadow-glow transition-all hover:brightness-110"
       >
-        Book My Azure Assessment
+        Book My Cloud Assessment
       </button>
     </form>
   );

@@ -33,17 +33,17 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/trust")({
   head: () => ({
     meta: [
-      { title: "Trust & Testimonials | ZensusTech Azure Partner Proof" },
+      { title: "Trust & Testimonials | ZensusTech Cloud Partner Proof" },
       {
         name: "description",
         content:
-          "Customer testimonials, measurable Azure case-study outcomes and the delivery philosophy behind ZensusTech — proof that cloud, security and operations are in safe hands.",
+          "Customer testimonials, measurable Cloud case-study outcomes and the delivery philosophy behind ZensusTech — proof that cloud, security and operations are in safe hands.",
       },
       { property: "og:title", content: "Trust & Testimonials | ZensusTech" },
       {
         property: "og:description",
         content:
-          "Customer voice, measurable outcomes and delivery discipline: how ZensusTech earns trust with Azure operations, security and cost teams.",
+          "Customer voice, measurable outcomes and delivery discipline: how ZensusTech earns trust with Cloud operations, security and cost teams.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -55,12 +55,12 @@ export const Route = createFileRoute("/trust")({
 const TESTIMONIALS = [
   {
     quote:
-      "ZensusTech transformed our cloud infrastructure completely. Their Azure migration strategy was flawless, and the cost savings exceeded our expectations. The team's expertise and dedication are exceptional.",
+      "ZensusTech transformed our cloud infrastructure completely. Their Cloud migration strategy was flawless, and the cost savings exceeded our expectations. The team's expertise and dedication are exceptional.",
     name: "Sourabh Tiwari",
     role: "Chief Technology Officer",
     company: "Codinker",
     category: "IT Services Company",
-    needed: "Azure migration",
+    needed: "Cloud migration",
     delivered: "Cloud transformation",
     changed: "Lower cost + improved scalability",
     outcomes: ["32% cost reduction", "99.9% uptime", "4× scalability"],
@@ -152,13 +152,13 @@ const PARTNERS = ["Codinker", "MR Enterprises", "ByteKode Labs", "UrbanVistaa", 
 const PROBLEMS = [
   {
     key: "Security",
-    concern: "Unclear exposure across Azure workloads",
+    concern: "Unclear exposure across Cloud workloads",
     capability: "Cloud security review + threat detection + governance",
     outcome: "Security and compliance posture made visible and enforceable",
   },
   {
     key: "Cost",
-    concern: "Rising Azure spend",
+    concern: "Rising Cloud spend",
     capability: "Cost analysis + resource optimization",
     outcome: "32% Cost Reduction",
   },
@@ -183,7 +183,7 @@ const PROBLEMS = [
 ] as const;
 
 const ZENOPS_PILLARS = [
-  { title: "See", copy: "Azure visibility", icon: Eye },
+  { title: "See", copy: "Cloud visibility", icon: Eye },
   { title: "Understand", copy: "Risk intelligence", icon: BarChart3 },
   { title: "Act", copy: "Operational action", icon: Wrench },
   { title: "Prove", copy: "Governance & evidence", icon: BadgeCheck },
@@ -542,7 +542,7 @@ function ZenOpsBridge() {
           invert
           eyebrow="Trust, continuously"
           title="What If You Could See the Risk Before Your Customer Does?"
-          copy="Trust should not depend on a quarterly review. ZenAI-Ops is designed to provide continuous intelligence across your Azure environment, helping teams identify security, operational, compliance and cost concerns earlier."
+          copy="Trust should not depend on a quarterly review. ZenAI-Ops is designed to provide continuous intelligence across your Cloud environment, helping teams identify security, operational, compliance and cost concerns earlier."
         />
         <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {ZENOPS_PILLARS.map((p, i) => (
@@ -766,7 +766,7 @@ function FinalCta() {
           Trust Your Cloud to the People Who Think Beyond the Cloud.
         </h2>
         <p className="mt-6 text-base text-navy-foreground/75 sm:text-lg">
-          Whether you need to secure Azure, optimize cloud costs, modernize infrastructure, automate delivery or
+          Whether you need to secure Cloud, optimize cloud costs, modernize infrastructure, automate delivery or
           operate your environment with confidence, ZensusTech can help.
         </p>
         <div className="mt-9 flex flex-wrap justify-center gap-3">

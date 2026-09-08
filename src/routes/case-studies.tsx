@@ -21,9 +21,9 @@ import { ArchitectureFlow } from "@/components/site/ZenOpsDiagram";
 import { CtaLink, MetricCard, Section, SectionHead, StatCard } from "@/components/site/primitives";
 import { cn } from "@/lib/utils";
 
-const TITLE = "Azure & Cloud Case Studies — Measurable Business Outcomes | ZensusTech";
+const TITLE = "Cloud & Cloud Case Studies — Measurable Business Outcomes | ZensusTech";
 const DESCRIPTION =
-  "Real cloud engagements from ZensusTech: 32% lower Azure infrastructure cost, 90% faster deployments and 40% managed-cloud savings, with measurable business outcomes.";
+  "Real cloud engagements from ZensusTech: 32% lower Cloud infrastructure cost, 90% faster deployments and 40% managed-cloud savings, with measurable business outcomes.";
 
 export const Route = createFileRoute("/case-studies")({
   head: () => ({
@@ -69,7 +69,7 @@ const STUDIES: Study[] = [
     number: "Case Study 01",
     icon: ShoppingCart,
     industry: "Retail — United Kingdom",
-    title: "Azure Migration for a UK Retail SMB",
+    title: "Cloud Migration for a UK Retail SMB",
     subtitle: "32% Lower Infrastructure Cost. 99.9% Uptime. 4× Scalability.",
     challengeLine:
       "Legacy infrastructure was becoming expensive to maintain and could not scale through seasonal demand spikes.",
@@ -77,8 +77,8 @@ const STUDIES: Study[] = [
     meta: [
       { label: "Industry", value: "Retail" },
       { label: "Location", value: "United Kingdom" },
-      { label: "Engagement", value: "Azure Migration" },
-      { label: "Technology", value: "Microsoft Azure" },
+      { label: "Engagement", value: "Cloud Migration" },
+      { label: "Technology", value: "Microsoft Cloud" },
     ],
     supporting: [
       { value: "99.9%", label: "Uptime" },
@@ -96,17 +96,17 @@ const STUDIES: Study[] = [
     challengeClose:
       "The existing environment needed to become more scalable without disrupting ongoing business operations.",
     approachIntro:
-      "ZensusTech designed and executed a structured Azure migration focused on creating a more scalable and resilient infrastructure foundation.",
+      "ZensusTech designed and executed a structured Cloud migration focused on creating a more scalable and resilient infrastructure foundation.",
     approach: [
       {
         title: "Assessment & Migration Planning",
         copy: "Evaluating the existing environment and developing a structured migration roadmap.",
       },
-      { title: "Azure Infrastructure", copy: "Deploying Azure Virtual Machines to support the required workloads." },
-      { title: "Database Migration", copy: "Migrating workloads to Azure SQL Database." },
+      { title: "Cloud Infrastructure", copy: "Deploying Cloud Virtual Machines to support the required workloads." },
+      { title: "Database Migration", copy: "Migrating workloads to Cloud SQL Database." },
       { title: "Auto-Scaling", copy: "Configuring automatic scaling to respond to changing demand." },
     ],
-    technology: ["Microsoft Azure", "Azure Virtual Machines", "Azure SQL Database", "Auto-Scaling"],
+    technology: ["Microsoft Cloud", "Cloud Virtual Machines", "Cloud SQL Database", "Auto-Scaling"],
     results: [
       { outcome: "Infrastructure cost", result: "32% reduction" },
       { outcome: "Availability", result: "99.9% uptime" },
@@ -228,7 +228,7 @@ const STUDIES: Study[] = [
 ];
 
 const GLANCE = [
-  { value: 32, suffix: "%", label: "Average cost reduction in the featured Azure migration" },
+  { value: 32, suffix: "%", label: "Average cost reduction in the featured Cloud migration" },
   { value: 99.9, suffix: "%", label: "Uptime achieved in the featured retail migration" },
   { value: 90, suffix: "%", label: "Faster deployments in the featured SaaS DevOps engagement" },
   { value: 40, suffix: "%", label: "Cost savings in the featured managed-cloud engagement" },
@@ -300,7 +300,7 @@ function CaseStudiesPage() {
                 Explore how businesses have transformed their cloud operations with ZensusTech.
               </p>
               <div className="mt-9 flex flex-wrap gap-3">
-                <CtaLink to="/contact">Check My Azure Environment</CtaLink>
+                <CtaLink to="/contact">Check My Cloud Environment</CtaLink>
                 <CtaLink to="/zenops" variant="onDark">
                   Book a ZenAI-Ops Demo
                 </CtaLink>
@@ -312,7 +312,7 @@ function CaseStudiesPage() {
                 <div className="pointer-events-none absolute inset-0 rounded-3xl grid-backdrop opacity-25" aria-hidden="true" />
                 <div className="relative space-y-4">
                   {[
-                    { icon: CloudCog, value: "32%", label: "Cost Reduction", note: "UK retail Azure migration" },
+                    { icon: CloudCog, value: "32%", label: "Cost Reduction", note: "UK retail Cloud migration" },
                     { icon: Rocket, value: "90%", label: "Faster Deployments", note: "SaaS DevOps automation" },
                     { icon: ShieldCheck, value: "40%", label: "Cost Savings", note: "Managed cloud services" },
                   ].map((item, i) => (
@@ -434,11 +434,11 @@ function CaseStudiesPage() {
               ))}
             </ul>
             <p className="mt-7 text-base leading-relaxed text-navy-foreground/75">
-              ZenAI-Ops is designed to provide continuous intelligence across your Azure environment so your team can
+              ZenAI-Ops is designed to provide continuous intelligence across your Cloud environment so your team can
               identify what needs attention earlier.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <CtaLink to="/contact">See What ZenAI-Ops Could Find in Your Azure Environment</CtaLink>
+              <CtaLink to="/contact">See What ZenAI-Ops Could Find in Your Cloud Environment</CtaLink>
               <CtaLink to="/zenops" variant="onDark">
                 Book a ZenAI-Ops Demo
               </CtaLink>
